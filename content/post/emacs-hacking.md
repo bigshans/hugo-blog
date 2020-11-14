@@ -17,7 +17,7 @@ categories:
 
 emacs 内置输入法是 [pyim](https://github.com/tumashu/pyim) 。用起来还可以，抄作者自己的配置就很好用了。这里我没做什么改动，就是官网上的例子。
 
-``` emacs-lisp
+``` lisp
 (use-package pyim
   :ensure nil
   :demand t
@@ -69,7 +69,7 @@ emacs 内置输入法是 [pyim](https://github.com/tumashu/pyim) 。用起来还
 这个官网没有说，我反复遇到这个问题，说让我定义 language-id-configuration ，但我明明定义了。
 language-id-configuration 是要在外部定义的，而不应该在 use-package 里面定义。
 
-``` emacs-lisp
+``` lisp
 (setq lsp-language-id-configuration '((java-mode . "java")
 
 (python-mode . "python")
@@ -114,11 +114,11 @@ language-id-configuration 是要在外部定义的，而不应该在 use-package
 ## Org Tab 键失效
 
 确认是否是最新版本的 org，主要原因是 org 团队去除了该功能如果想要恢复该功能，使用如下语句即可：
-``` emacs-lisp
+``` lisp
 (require 'org-tempo) 
 ```
 如果你使用 use-package 的话，则是：
-``` emacs-lisp
+``` lisp
 (use-package org-tempo)
 ```
 

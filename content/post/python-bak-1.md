@@ -9,14 +9,19 @@ categories:
 这些篇主要是记录 python 的一些知识，有些可能很基础，不过我总是忘记，以此备忘。
 <!--more-->
 ## os
-os.listdir()：列出当前目录下的所有文件，相当于返回 ls 的结果。
+``` python
+os.listdir() # 列出当前目录下的所有文件，相当于返回 ls 的结果
 
-os.chdir(path)：切换当前目录。
+os.chdir(path) # 切换当前目录
 
-os.path.splittext(path)：分离文件和扩展名。
+os.path.splittext(path) # 分离文件和扩展名
 
-os.path.exits(path)：路径是否存在。
+os.path.exits(path) # 路径是否存在
+
+```
 
 ## str
 
-str.join(list)：将字符串用 str 连接。
+``` python
+str.join(list) # 将字符串用 str 连接
+```

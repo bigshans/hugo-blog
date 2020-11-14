@@ -12,7 +12,9 @@ tags:
 
 我是选择直接下载对应的 fontconfig-infinality 包进行安装，由于并没有别的什么依赖，安装很顺利。之后输入命令：
 
-    sudo bash /etc/fonts/infinality/infctl.sh setstyle
+``` shell
+sudo bash /etc/fonts/infinality/infctl.sh setstyle
+```
 
 我选择的是 osx，我比较喜欢 mac 风。
 之后编辑 /etc/profile.d/infinality-setting.sh ，找到 USE_STYLE ，修改成我们刚刚选的。然后重启一下电脑就可以了。

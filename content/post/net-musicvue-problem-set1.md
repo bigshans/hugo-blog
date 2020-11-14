@@ -3,9 +3,10 @@ title: webpack 的 require 和 import 相关的一点问题
 date: 2018-08-26 12:41:45
 tags:
  - javascript
- - electron-vue
+ - electron
+ - vue
 categories:
- - net-cloud-music
+ - netcloud-music
 
 ---
 
@@ -15,7 +16,7 @@ categories:
 
 ## import 和 require 混用问题
 
-很麻烦的问题，不过很好解决。一般会报错显示 Cannot assign to read only property 'exports' of object '#<Object> 。
+很麻烦的问题，不过很好解决。一般会报错显示 `Cannot assign to read only property 'exports' of object '` 。
 
 首先 webpack 不支持两者混用，分开用还是没有问题的，你可以选择将两者同意改为 require 或 import ，但我这里有问题，express 不支持用 import 但 electron-vue 使用 es6 的语法，改两个都不可能，所以只能寻求他法。
 
