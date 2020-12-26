@@ -2,6 +2,7 @@
 title: 初识 React Native （一）
 date: 2020-12-02T21:26:09+08:00
 draft: false
+toc: true
 tag:
  - React Native
  - React
