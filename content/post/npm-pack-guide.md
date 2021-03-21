@@ -2,6 +2,11 @@
 title: npm 打包指南
 date: 2021-03-21T11:53:14+08:00
 draft: false
+tags:
+- npm
+- nodejs
+categories:
+- nodejs
 ---
 
 最近在修改一些很长时间无人维护的包，估计包作者都不维护了，于是我重新搞了一份传到了 npm 上，有兴趣的可以看一下：[log4js-rabbitmq-appenders](https://www.npmjs.com/package/log4js-rabbitmq-appenders) 。
