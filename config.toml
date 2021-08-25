@@ -14,6 +14,7 @@ pygmentsCodefences = false
 pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 pygmenttsStyle = "autumn"
+rssLimit = 50
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 8                                              # 首页每页显示的文章数
