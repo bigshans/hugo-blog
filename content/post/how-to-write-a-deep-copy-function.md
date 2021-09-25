@@ -21,6 +21,7 @@ categories:
 
 ``` javascript
 function type(val) {
+  // 特判 null 和 undefined ，因为这两个会报错
   return val === 'null' ?
     'Null'
     :val === undefined
@@ -33,9 +34,11 @@ function type(val) {
 
 ``` javascript
 function clone(source) {
+  // null 和 undefined 在 == 下相等
   return source == null ? source : _clone(source);
 }
 
+// 克隆正则
 function _cloneRegExp(pattern) {
   return new RegExp(pattern.source,
     (pattern.global     ? 'g' : '') +
@@ -46,15 +49,19 @@ function _cloneRegExp(pattern) {
 }
 
 function _clone(value, refFrom, refTo) {
+  // 递归克隆，并在内部构建函数处理，主要是为了保留变量
+  // 防止参数传递过多造成编写困难
   function copy(copiedValue) {
     const len = refFrom.length;
     let idx = 0;
+    // 循环引用查找
     while (idx < len) {
       if (value === refFrom[idx]) {
         return refTo[idx];
       }
       idx += 1;
     }
+    // 无循环引用，自动扩充一位
     refFrom[idx] = value;
     refTo[idx] = copiedValue;
     for (const key in value) {
