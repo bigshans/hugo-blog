@@ -19,11 +19,13 @@ minikube 是个轻量版的 k8s ，它相比 k8s 更易于安装，命令与 k8s
 
 想要安装 minikube 需要符合以下条件：
 
-- 两核以上 GPU
-- 2GB 以上的空闲内存
-- 20GB 以上的剩余磁盘空间
-- 网络连接
-- 容器或虚拟机管理器，可选择 Docker, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, VMWare 中的一个。
+- 两核及以上 CPU 。
+- 2GB 以上的空闲内存（不包括 swap）。
+- 20GB 以上的剩余磁盘空间。
+- 网络连接（拉镜像用）。
+- 容器或虚拟机管理器，可选择 Docker, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, VMWare 中的一个，默认 Docker 。
+
+建议用新一点的 Minikube 。
 
 ### Linux 安装
 
@@ -57,7 +59,7 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin
 sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 ```
 
-arm64：
+arm64（M1）：
 ``` shell
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
 sudo install minikube-darwin-arm64 /usr/local/bin/minikube
@@ -68,8 +70,8 @@ sudo install minikube-darwin-arm64 /usr/local/bin/minikube
 使用包管理其实贼好装。
 
 ``` powershell
-choco install minikube
-winget install minikube
+choco install minikube # chocolatey
+winget install minikube # windows package manager
 ```
 
 上面分别使用了 chocolatey 和 windows package manager 。
@@ -100,7 +102,7 @@ if($oldpath -notlike "*;C:\minikube*"){`
 
 ## 启动 minikube
 
-想要启动 minikube ，我们需要运行如下命令：
+运行如下命令即可：
 
 ``` shell
 minikube start
