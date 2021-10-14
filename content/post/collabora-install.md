@@ -12,7 +12,7 @@ tags:
 
 最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。
 
-首先，极其不推荐使用 Docker 部署，因为 Docker 已经好久没维护了，其次，如果你使用的是 Debian 、 CentOS 、 OpenSUSE 一系的话，应该是比较好安装的。在这里，我们使用软件包安装。
+首先，极其不推荐使用 Docker 部署，因为 Docker 版已经好久没维护了，其次，如果你使用的是 Debian 、 CentOS 、 OpenSUSE 一系的话，应该是比较好安装的。在这里，我们使用软件包安装。
 
 官网已经有了非常详细的软件包安装过程，我就不再赘述了，但有一些内容需要补充。
 
