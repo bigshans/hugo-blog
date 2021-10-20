@@ -379,3 +379,179 @@ fn calculate_length(s: String) -> (String, usize) {
 ```
 
 我们使用元组可以返回数据，顺便把需要的参数传出来。但这么写起来未免太麻烦了。
+
+#### 引用与借用
+
+为了解决上面的麻烦， Rust 引入了引用。
+
+我们将上面的代码改写为引用版本。
+
+``` rust
+fn main() {
+    let s1 = String::from("hello");
+
+    let len = calculate_length(&s1);
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
+
+使用引用，我们就将变量引入到作用域内来，但离开作用域的时候，值也不会被丢弃，在 Rust 里，我们使用 **借用** （borrowing） 这个词来描述此种行为。
+值得注意的是，引用默认与赋值的情况一样，是不可更改的，比如像下面的代码，是不可以被编译通过的。
+
+``` rust
+fn main() {
+    let s = String::from("hello");
+
+    change(&s);
+}
+
+fn change(some_string: &String) {
+    some_string.push_str(", world");
+}
+```
+
+但如果我们确实需要改变所指向的值该怎么办呢？与赋值一样使用 `mut` 。我们稍加改造，上面的代码就可以通过了。
+
+``` rust
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+```
+
+我们称呼为可变引用。
+
+但引用的使用也有限制，总的遵循一下两条规则：
+
+    - 在任意给定时间，要么**只能有一个可变引用**，要么**只能有多个不可变引用**。
+    - 引用必须总是有效的。
+
+### 克隆与基础数据类型
+
+有些时候我们实际上是需要一份一模一样的新数据作为我们的值，我们可以使用 `clone()` 方法来了解决这个问题。
+
+``` rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1 = {}, s2 = {}", s1, s2);
+}
+```
+
+另外，基础数据类型是直接使用克隆而不是像对象一样使用移动的。
+
+``` rust
+fn main() {
+    let x = 5;
+    let y = x;
+
+    println!("x = {}, y = {}", x, y);
+}
+```
+
+## 切片
+
+切片就是对一段连续数据序列的引用，这个引用是不可变引用。
+
+```rust
+fn main() {
+    let s = String::from("Hello, World!");
+    let part1 = &s[0..6];
+    let part2 = &s[6..13];
+    println!("{}={}+{}", s, part1, part2);
+}
+```
+
+`..` 我们在循环章节看过， `0..6` 代表一个 $0 \le i < 6$ 区间的切片。
+除此之外， `..` 还有其他的状态。
+
+    `..y` 等价于 `0..y` 。
+    `x..` 等价于从 x 开始到结束。
+    `..` 等价于全部的数据。
+
+另外，我们说过，切片是不可变引用，因此我们不能改变切片的值。
+
+``` rust
+fn main() {
+    let mut s = String::from("Hello, World");
+    let slice = &s[0..6];
+    s.push_str("Jack!"); // 错误
+    println!("slice = {}", slice);
+}
+```
+
+另外，还有一个有趣的问题不知道你有没有发现。我们一直在使用 `String` 而不是直接使用字符串，这是为什么呢？
+
+如果我们直接使用字符串，我们实际上使用的是 `&str` ，换而言之，就是引用。而 `String` 就是对 `&str` 的包装。裸用 `&str` 其实是既不方便又不安全的，所以我们使用 `String` 。不过，我们可以使用切片进行非常简单的转换。
+
+``` rust
+fn main() {
+    let s1 = String::from("hello");
+    let s2 = &1[..];
+    println!("{}", s2);
+}
+```
+
+当然，我们说切片适用于**连续序列**，所以也不止于字符串。
+
+``` rust
+fn main() {
+    let arr = [1, 2, 3, 4, 5, 6];
+    let part = &arr[0..3];
+    for i in part.iter() {
+        println!("{}", i);
+    }
+}
+```
+
+## 结构体
+
+Rust 结构体的定义使用 `struct` 关键字。
+
+``` rust
+struct User {
+    username: String,
+    email: String,
+    sign_in_count: u64,
+    active: bool,
+}
+```
+
+定义结构体后，我们就可以创建一个结构体了。
+
+``` rust
+let user1 = User {
+    email: String::from("hello@exmaple.com"),
+    username: String::from("user"),
+    active: true,
+    sign_in_count: 1,
+};
+```
+
+Rust 创建结构体的方法其实与 JS 创建对象的方法类似，熟悉 JS 的方法应该很熟悉。
+
+Rust 还可以这样创建。
+
+``` rust
+fn build_user(email: String, username: String) -> String {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+```
+
+
