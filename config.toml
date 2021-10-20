@@ -90,7 +90,7 @@ copyright = "bigshans"            # default: author.name ↓        # 默认为�
   fancybox = true           # see https://github.com/fancyapps/fancybox                 # 是否启用fancybox（图片可点击）
 
   # mathjax
-  mathjax = true           # see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）
+  mathjax = true # see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）
   mathjaxEnableSingleDollar = true                                                     # 是否使用 $...$ 即可進行inline latex渲染
   mathjaxEnableAutoNumber = false                                                       # 是否使用公式自动编号
   mathjaxUseLocalFiles = false  # You should install mathjax in `your-site/static/lib/mathjax`
@@ -231,3 +231,8 @@ copyright = "bigshans"            # default: author.name ↓        # 默认为�
 #  section = ["HTML", "RSS"]
 #  taxonomy = ["HTML", "RSS"]
 #  taxonomyTerm = ["HTML"]
+[blackfriday]
+  angledQuotes = true
+  fractions = false
+  plainIDAnchors = true
+  extensions = ["hardLineBreak"]
