@@ -10,7 +10,7 @@ categories:
 - linux
 ---
 
-Hugo 可以使用不同的 markdown 引擎来解析 'md' ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。
+Hugo 可以使用不同的 markdown 引擎来解析 `md` ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。
 
 ## 缘起
 
