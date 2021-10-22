@@ -4,10 +4,11 @@ date: 2021-10-18T16:06:11+08:00
 draft: false
 markup: pandoc
 tags:
-- machine learing
+- 机器学习
 - tensorflow
+- python
 categories:
-- tensorflow
+- 机器学习
 ---
 
 数学是通往机器学习不可避免的路径，它即是阶梯也是拦路虎。本篇以 d2l 第二版所提供的数学知识作为阅读内容进行学习。换而言之，本篇是 d2l 的读书笔记。我尽量把我能弄懂弄清楚，所以，开始吧！
