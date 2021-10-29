@@ -1,5 +1,5 @@
 ---
-title: Rust 极简入门
+title: Rust 快速入门
 date: 2021-10-09T15:57:32+08:00
 draft: true
 tags:
@@ -554,4 +554,243 @@ fn build_user(email: String, username: String) -> String {
 }
 ```
 
+结构体也可以使用别的结构体进行创建。
 
+``` rust
+fn main() {
+    struct User {
+        username: String,
+        email: String,
+        sign_in_count: u64,
+        active: bool,
+    }
+
+    let user1 = User {
+        email: String::from("someone@example.com"),
+        username: String::from("someusername123"),
+        active: true,
+        sign_in_count: 1,
+    };
+
+    let user2 = User {
+        active: user1.active,
+        username: user1.username,
+        email: String::from("another@example.com"),
+        sign_in_count: user1.sign_in_count,
+    };
+}
+```
+
+我们也可以使用 `..` 来指定剩余为显示设置的字段。
+
+``` rust
+let user2 = User {
+    email: String::from("another@example.com"),
+    ..user1
+}
+```
+
+一定需要注意的是，当我们这样使用的时候，就相当于我们在调用 `=` ，我们的值将会发生移动，在上面的例子里，我们将不能再使用 `user1` 。
+
+#### 元组结构体
+
+``` rust
+struct Color(i32, i32, i32);
+let black = Color(0, 0, 0);
+```
+
+### 枚举
+
+我们使用 `enum` 来定义枚举，例如
+
+``` rust
+enum IpAddrKind {
+    V4,
+    V6,
+}
+```
+
+其中 `IpAddrKind` 为我们定义的枚举， `V4` 、 `V6` 为枚举的成员。
+
+这是一个非常简单的创建，我们也可以简单创建一个实例。
+
+``` rust
+let four = IpAddrKind::V4;
+let six = IpAddrKind::V6;
+```
+
+但光是这样有时候对我们来说并不太够，我们可以将它与实际上的数据进行绑定。
+
+``` rust
+enum IdAddr {
+    V4(u8, u8, u8, u8),
+    V6(String),
+}
+
+let home = IpAddrKind::V4(127, 0, 0, 1);
+let loopback = IpAddr:V6(String::from("::1"));
+```
+
+事实上，你会问这样定义枚举又什么意义？ Rust 中的枚举其实是为了 `match` 控制准备的。
+
+### `match` 模式匹配
+
+Rust 有一个叫做 match 的极为强大的控制流运算符，它允许我们将一个值与一系列的模式相比较，并根据相匹配的模式执行相应代码。模式可由字面值、变量、通配符和许多其他内容构成。match 的力量来源于模式的表现力以及编译器检查，它确保了所有可能的情况都得到处理。我们目前讲得比较简单。
+
+``` rust
+fn main() {
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+}
+```
+
+结构上似乎与我们常见的 `switch` 非常相似，但 `match` 比 `switch` 要强大得多。
+
+我们还可以对它进行值匹配。
+
+``` rust
+fn main() {
+    let book = 1;
+    match book {
+        1 => {
+            println!("{}", book);
+        },
+        _ => {
+            println!("fuck!");
+        }
+    }
+}
+```
+
+`_` 在次是用来兜底的，相当于 `default` ， Rust 会穷尽所有的模式，如果又代码没有处理完成就会报错。
+
+### `Option`
+
+`Option` 是 Rust 标准库里的一个枚举。它的定义如下：
+
+``` rust
+enum Option<T> {
+    Some(T),
+    None,
+}
+```
+
+你不需要显示引入它。这里 Rust 用到了泛型。
+
+`None` 意味着无， `Some` 意味着被保存的非空数据。
+
+我们结合 `Option` 和 `match` 一起写个程序。
+
+``` rust
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+
+fn main() {
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+    println!("{} {:?}", six.unwrap(), none);
+}
+```
+
+### `if let` 简单控制流
+
+`if let` 语法让我们以一种不那么冗长的方式结合 `if` 和 `let` ，来处理只匹配一个模式的值而忽略其他模式的情况。考虑下面的例程，它匹配一个 `Option<u8>` 值并只希望当值为 3 时执行代码：
+
+``` rust
+fn main() {
+    let some_u8_value = Some(0u8);
+    match some_u8_value {
+        Some(3) => println!("three"),
+            _ => (),
+    }
+}
+```
+
+但是 `- => ()` 为我们添加许多无用的代码，我们想要写的更简洁。
+
+``` rust
+fn main() {
+    let some_u8_value = Some(0u8);
+    if let Some(3) = some_u8_value {
+        println!("three");
+    }
+}
+```
+
+如此我们省去了无用的分支，减少了模板代码的编写。同时我们也可以结合 `else` 来减少 `match` 的啰嗦。
+
+``` rust
+fn main() {
+    enum UsState {
+        Alabama,
+        Alaska,
+    }
+
+    enum Coin {
+        Penny,
+        Nickel,
+        Dime,
+        Quarter(UsState),
+    }
+    let coin = Coin::Penny;
+    let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {:?}!", state);
+    } else {
+        count += 1;
+    }
+}
+```
+
+## Cargo 基础
+
+Cargo 是 Rust 的构建系统和包管理器，我们一般用它来创建 Rust 工程，管理 Rust 依赖。
+
+### Cargo 基本功能
+
+Cargo 可以完成从项目创建，到构建、运行等一系列工程。
+
+``` bash
+cargo new newproject # 创建项目
+cd newproject
+cargo build # 编译项目
+cargo run # Hello, world!
+```
+
+在项目的目录下面有 `Cargo.toml` 文件和 `src` 目录，前者记录了项目的一些基本信息和项目的依赖，后者就是项目的 Rust 源码了。
+
+### 模块和权限控制
+
+Rust 中的组织单位是模块。
+
+``` rust
+mod nation {
+    mod government {
+        fn govern() {}
+    }
+    mod congress {
+        fn legislate() {}
+    }
+    mod court {
+        fn judicial() {}
+    }
+}
+```
