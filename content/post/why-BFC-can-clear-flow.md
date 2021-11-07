@@ -14,11 +14,11 @@ categories:
 
 主要是文档下面的一段内容：
 
-    Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.
+> Floats, absolutely positioned elements, block containers (such as inline-blocks, table-cells, and table-captions) that are not block boxes, and block boxes with 'overflow' other than 'visible' (except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.
 
 简单来说，就是当我们设置 `div` 为 `float` 、 绝对定位元素、块级容器等非块盒型，或块级盒型的 `overflow` 为除 `visible` 以外的值时，会为盒子创建新的上下文。而关于这个新的上下文：
 
-    In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)
+> In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)
 
 意思是，其子元素将左右相连贴合，实际上的样子，就像清除了浮动了一样。这个要求本质上是为了让盒型保持规整，否则盒型就不是一个规则的矩形了。
 
