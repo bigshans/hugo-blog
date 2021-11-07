@@ -70,9 +70,9 @@ CSS 还提供了简写 `flex-flow` 用来同时设置 `flex-direction` 和 `flex
 
 ``` css
 /* 关键字值 */
-flex: auto;
-flex: initial;
-flex: none;
+flex: auto; /* flex: 1 1 auto */
+flex: initial; /* flex: 0 1 auto */
+flex: none; /* flex: 0 0 auto */
 
 /* 一个值, 无单位数字: flex-grow */
 flex: 2;
@@ -126,4 +126,6 @@ flex: unset;
 
 `justify-content` 属性用来使元素在主轴方向上对齐，主轴方向是通过 `flex-direction` 设置的方向。初始值是`flex-start`，元素从容器的起始线排列。但是你也可以把值设置为`flex-end`，从终止线开始排列，或者`center`，在中间排列。
 
-主要内容就是这些。
+
+
+最后，关于 `flex` 属性的话也可以参考这篇博文： https://www.zhangxinxu.com/wordpress/2020/10/css-flex-0-1-none/ 。
