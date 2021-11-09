@@ -1,3 +1,3 @@
 # hugo-blog
 
-My Blog's source. Finally it will be compited with hugo.
+My Blog's source. Finally it will be compiled with hugo.
