@@ -115,3 +115,21 @@ fib(5); 5
 ```
 
 嗯，不如直接写 lisp (逃
+
+---
+
+更新：我艹，真有大佬写了 lisp 解释器！
+
+[TypeScript 类型体操天花板，用类型运算写一个 Lisp 解释器 - 掘金](https://juejin.cn/post/7024673107906396190)
+
+真的 NB ！
+
+另外，我又写了大小比较的代码，只适用于整数，我觉得这个挺好玩的。
+
+```typescript
+type Gt<A extends any[], B extends any[]> =
+ A extends [...B, ...infer R] ?
+   (R extends [] ? false : true)
+: false;
+type T = Gt<ToNum<0>, ToNum<3>>;
+```
