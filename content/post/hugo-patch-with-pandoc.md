@@ -1,7 +1,7 @@
 ---
 title: 给 Hugo 增加一些 Pandoc 支持增强
 date: 2021-10-22T13:46:00+08:00
-markup: pdc
+markup: pandoc
 draft: false
 tags:
 - hugo
