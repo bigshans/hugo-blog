@@ -54,7 +54,7 @@ CSS 还提供了简写 `flex-flow` 用来同时设置 `flex-direction` 和 `flex
 
 `flex-shrink` 生效于当 flex 容器主尺寸小于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸小于各个 flex item 尺寸之和时，浏览器会按照子元素 `flex-shrink` 设定进行分配缩放。例如，当  flex 容器有 3 个子元素，若 flex 容器为 100px ，子元素的 `flex-shrink` 分别设定为 A 、B 元素 1 ，C 元素 2 ，三个元素宽度都为 60px ，`3*60=180px` ，溢出容器 80px 。我们计算总权重为 `1*60+1*60+2*60=240` ，因此 A 、B 元素需要减少 `1*60/240*80=20px` ，C 元素需要减少 `2*60/240*80=40px` ，最终 A 、B 为 40px ，C 为 20px 。
 
-关于 `flex-shrink` 和 `flex-grow` 的具体计算还请参看这篇文章 [](https://zhuanlan.zhihu.com/p/24372279) 。
+关于 `flex-shrink` 和 `flex-grow` 的具体计算还请参看[这篇文章](https://zhuanlan.zhihu.com/p/24372279) 。
 
 ### `flex-basis`
 
