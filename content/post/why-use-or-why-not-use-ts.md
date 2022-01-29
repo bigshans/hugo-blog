@@ -3,9 +3,9 @@ title: 为什么使用或为什么不用 TypeScript
 date: 2021-11-29T15:38:55+08:00
 draft: false
 tags:
-- 随笔
+  - 随笔
 categories:
-- 随笔
+  - 编程
 ---
 
 最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环境搭建到部署发布， Angular 很省心地处理了其中的大部分问题，使得你可以专心业务，在这一点上，学习 Angular 的 NestJS 还是差很多的。
@@ -57,5 +57,3 @@ ts 的类型之于 js 不过是一层皮，即使 ts 类型不对， js 也能�
 ## 结语
 
 这是我这一段时间使用 TypeScript 的经验谈，通过这一段时间的使用，我已经享受到了 TypeScript 在项目中开发的快乐，虽然如此，我仍然会选择视情况而定。诚然， TypeScript 有诸多好处，但最终 TypeScript 仍然是要被编译成 JavaScript 的，在大项目中，如果来不及做注释的话， TypeScript 确实是更好的选择，但小项目中，原生其实没有你想的那么难堪。
-
-
