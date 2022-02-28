@@ -2,25 +2,21 @@
 title: 在 vim 下修改自然码码表
 date: 2019-01-31 11:27:53
 tags:
-- rime
-- vim
-- fcitx
-- 正则表达式
+  - rime
+  - vim
+  - fcitx
+  - 正则表达式
 categories:
-- vim
+  - vim
 ---
 
 最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。
-
-<!--more-->
 
 rime 是个高可配置的输入法，所以我决定搜寻一下配置。 rime 的配置方案还是很多的，我首先尝试了 double-pinyin 方案，因为我日常使用双拼。然后我往其中添加了大字库，词库丰富之后超级好用。不过 double-pinyin 只是 luna_pinyin 的一个修改，不能使用辅助码。我想，能不能自己配置一个呢？说干就干。
 
 我首先查了一下，看看有没有人配置好了自然码+辅助码的方案，不过，虽然有但链接往往又不能下载，搞得我很不高兴。然后，我就查到了一个自然码 2000 的方案，我喜不自胜地挂载到我的小狼毫里，发现竟然不能用！我又郁闷了会，参照网上某些人配置的方案修改了一下，终于能正常使用了！然后我就切换了一下发现，整个体验跟我想得不太一样。我更想要再双拼的基础上，需要时再添加辅助码，像 windows 下的搜狗那样。想了想既然这样，我还是自己修改得到一份自己的方案吧！
 
 ## 修改码表
-
-
 
 首先我搜寻了如何制作 rime 辅助码的相关信息，找到了佛振大佬的帖子。佛振大佬用的是 vim ，不过有很多替换命令不太能对应，所以我只能自己多思考一下。
 
@@ -56,7 +52,7 @@ rime 是个高可配置的输入法，所以我决定搜寻一下配置。 rime 
 
 ```yaml
 speller:
-  alphabet: "zyxwvutsrqponmlkjihgfedcba;"
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba;'
   delimiter: " '"
   algebra:
     - derive/^(\w*);(\w)(\w)$/$1;$2$3/    ＃ 完全自然码
@@ -116,7 +112,13 @@ translator:
 最后附上我方案的 github 地址：https://github.com/bigshans/rime-zrm
 
 引用：
+
 1. [佛振大佬的帖子](http://tieba.baidu.com/p/2094178562)
 2. [rime 输入方案入门指导](https://github.com/rime/home/wiki/RimeWithSchemata)
 3. [自然码 2000](https://github.com/henices/rime)
 
+---
+
+更新：
+
+最近修改了一下词库，因为原来的词库确实问题比较多。结合了 luna_pinyin 的内容，再顺便加了些表情和颜文字之类的内容，原来的内容似乎要重新调教了，不过新的词库准是准了很多，各有优劣吧！
