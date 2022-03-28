@@ -4,7 +4,7 @@ date: 2022-03-29T01:16:23+08:00
 draft: false
 tags:
   - 发病日记
-category:
+categories:
   - 发病日记
 ---
 
