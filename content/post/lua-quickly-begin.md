@@ -3,11 +3,11 @@ title: lua 快速入门
 date: 2022-01-09T15:01:18+08:00
 draft: false
 tags:
-- lua
-- 编程语言学习
+  - lua
+  - 编程语言学习
 categories:
-- lua
-- 编程语言学习
+  - lua
+  - 编程语言学习
 ---
 
 lua 是一门用标准 C 语言编写的、轻量小巧的脚本语言，它常常被嵌入到各种 C 语言项目中做扩展语言。它与 C 的兼容性不必多说，本身也是用 C 写的，速度也是非常的快。像 Redis 、 Nginx 、 AwesomeWM 等都拿它做扩展语言，现在 Neovim 也加入了增强 lua 语言扩展，性能也是非常好。虽然我目前没有用 lua 语言扩展的打算，但也不打算未来不用。总之，先学起来。
@@ -31,7 +31,7 @@ lua 快速学习， https://learnxinyminutes.com/docs/lua/ 。
 
 ### nil
 
-``` lua
+```lua
 local a -- output: nil
 ```
 
@@ -46,7 +46,7 @@ a = nil
 
 ### number
 
-``` lua
+```lua
 local num = 42  -- All numbers are doubles.
 -- Don't freak out, 64-bit doubles have 52 bits for
 -- storing exact int values; machine precision is
@@ -57,7 +57,7 @@ number 跟 JavaScript 一样 int 和 double 不分。
 
 ### boolean
 
-``` lua
+```lua
 local a = true
 local b = false
 ```
@@ -66,7 +66,7 @@ boolean 值主要就是两个： `true` 和 `false` 。
 
 ### string
 
-``` lua
+```lua
 s = 'walternate'  -- Immutable strings like Python.
 t = "double-quotes are also fine"
 u = [[ Double brackets
@@ -79,7 +79,7 @@ lua 有三种表示字符串的方法：单引号、双引号以及括号。前�
 
 ### function
 
-``` lua
+```lua
 local function foo()
     print("in the function")
     --dosomething()
@@ -97,7 +97,7 @@ lua 中视函数也是值，于是我们可以借助回调的手段实现闭包�
 
 ### table
 
-``` lua
+```lua
 local corp = {
     web = "www.google.com",   --索引为字符串，key = "web",
                               --            value = "www.google.com"
@@ -129,7 +129,7 @@ lua 借助 table 类型以实现面向对象、字典、数组等特性。
 
 ### if/else
 
-``` lua
+```lua
 if num > 40 then
   print('over 40')
 elseif s ~= 'walternate' then  -- ~= is not equals.
@@ -153,7 +153,7 @@ end
 
 ### while
 
-``` lua
+```lua
 while num < 50 do
   num = num + 1  -- No ++ or += type operators.
 end
@@ -161,7 +161,7 @@ end
 
 ### repeat
 
-``` lua
+```lua
 repeat
   print('the way of the future')
   num = num - 1
@@ -172,7 +172,7 @@ until num == 0
 
 ### for
 
-``` lua
+```lua
 karlSum = 0
 for i = 1, 100 do  -- The range includes both ends.
   karlSum = karlSum + i
@@ -187,7 +187,7 @@ end
 
 这里的 `1, 100` 表示数字 1 到 100 ，且步长为 1 。 `100, 1, -1` 表示数字 100 到 1 ，且步长为 -1 。这里对一个数字范围进行了迭代。
 
-``` lua
+```lua
 -- 打印数组a的所有值
 local a = {"a", "b", "c", "d"}
 for i, v in ipairs(a) do
@@ -205,7 +205,7 @@ end
 
 #### break
 
-``` lua
+```lua
 -- 计算最小的x,使从1到x的所有数相加和大于100
 sum = 0
 i = 1
@@ -221,7 +221,7 @@ print("The result is " .. i)  -->output:The result is 14
 
 #### return
 
-``` lua
+```lua
 local function add(x, y)
     return x + y
     --print("add: I will return the result " .. (x + y))
@@ -248,7 +248,7 @@ print(answer)                -->output:-10 is non-positive
 
 lua 还可以用 `do-end` 括起来。
 
-``` lua
+```lua
 local function foo()
     print("before")
     do return end
@@ -260,7 +260,7 @@ end
 
 在 lua 中我们使用 `goto` 来实现 `continue` 。
 
-``` lua
+```lua
 for i = 1, 3 do
     if i <= 2 then
         print(i, "yes continue")
@@ -282,7 +282,7 @@ lua 采用了关键字进行布尔运算，类似于 python 。
 
 ## 函数
 
-``` lua
+```lua
 function fib(n)
   if n < 2 then return 1 end
   return fib(n - 2) + fib(n - 1)
@@ -337,7 +337,7 @@ lua 的函数定义其实一看就懂，这里比较特色的是， lua 函数�
 
 ## 函数回调
 
-``` lua
+```lua
 unpack = table.unpack or unpack
 
 local function run(x, y)
@@ -359,7 +359,7 @@ callback(attack, 1111)
 
 ## 简单的面向对象
 
-``` lua
+```lua
 Dog = {}                                   -- 1.
 
 function Dog:new()                         -- 2.
@@ -393,7 +393,7 @@ mrDog:makeSound()  -- 'I say woof'         -- 8.
 
 下面是继承：
 
-``` lua
+```lua
 LoudDog = Dog:new()                           -- 1.
 
 function LoudDog:makeSound()
@@ -427,7 +427,7 @@ end
 
 ## 模块
 
-``` lua
+```lua
 local _M = {}
 
 local function get_name()
@@ -443,7 +443,7 @@ return _M
 
 在这里我们定义了一个 table ，并在最后将它 `return` 出去， `_M` 就是我们这个模块所要导出的数据。注意，这里全局变量其实是会有影响的，不定义为 `local` 才能暴露出去。
 
-``` lua
+```lua
 local my_module = require("my")
 my_module.greeting()     -->output: hello Lucy
 ```
@@ -454,7 +454,7 @@ my_module.greeting()     -->output: hello Lucy
 
 ### 数组大小的获取
 
-``` lua
+```lua
 local a = {1, 2, 3, 4}
 print #a
 ```
@@ -463,7 +463,7 @@ print #a
 
 ### 虚变量
 
-``` lua
+```lua
 local t = {1, 3, 5}
 
 print("all  data:")
@@ -480,7 +480,7 @@ end
 
 虚变量指的是 `_` ，一般我们不会去读它的值。虚变量可以被多次使用。
 
-``` lua
+```lua
 function foo()
     return 1, 2, 3, 4
 end
@@ -501,7 +501,7 @@ lua 必须先定义，后调用，这与 JavaScript 还有 Python 不一样。
 
 ### 点号与冒号操作符的区别
 
-``` lua
+```lua
 obj = { x = 20 }
 
 function obj:fun1()
@@ -511,11 +511,10 @@ end
 
 等价于
 
-``` lua
+```lua
 obj = { x = 20 }
 
 function obj.fun1(self)
     print(self.x)
 end
 ```
-
