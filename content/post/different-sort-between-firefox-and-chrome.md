@@ -66,4 +66,21 @@ Chrome 的结果是：
 
 7 排前面了。
 
-遇到这些情况需要你清楚调用顺序，然后规避一下就好了。
+不过实际上除了自己做的特殊情况，顺序是无需考虑的事情：
+
+```javascript
+var a = [1, 2, 3, 4];
+function cmp(a, b) {
+  if (a > b) {
+    return -1;
+  } else if (a === b) {
+    return 0;
+  }
+  return 1;
+}
+console.log(a.sort(cmp));
+```
+
+这个结果是两边一致的。
+
+遇到那些情况需要你清楚调用顺序，然后规避一下就好了。
