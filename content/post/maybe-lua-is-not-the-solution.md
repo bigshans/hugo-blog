@@ -1,5 +1,5 @@
 ---
-title: "可能 lua 不是解决方案"
+title: "可能 lua 不是配置 nvim 的最佳解决方案"
 date: 2022-04-04T21:55:06+08:00
 draft: false
 tags:
