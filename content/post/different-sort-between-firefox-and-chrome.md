@@ -88,7 +88,7 @@ console.log(a.sort(cmp));
 
 补遗：
 
-[这个问题](https://stackoverflow.com/questions/68113002/js-sort-different-behaviour-in-firefox-and-chrome)提出了类似的疑问，下面的回答并解答了疑惑。
+[这个问题](https://stackoverflow.com/questions/68113002/js-sort-different-behaviour-in-firefox-and-chrome)提出了类似的疑问，下面的回答解答了此疑惑。
 
 简单来说， `compareFn` 需要满足比较比较一致性。如果 `a = b` 且 `a = c, b = d` ，那么 `a = d` ，但我上面的代码就不满足比较一致性了，很可能会出现 `a != d` 的情况 ，因此就会出现因为浏览器算法实现差异而出现问题。比如题目中仅仅实现了 `-1` 和 `0` 的情况，缺少 `1` ，这就会导致比较一致性问题的出现。
 
