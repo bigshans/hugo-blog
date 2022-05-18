@@ -2,7 +2,7 @@
 title: latex 部分常用公式代码
 date: 2018-12-26 15:46:18
 copyright: true
-mathjax: true
+markup: pandoc
 tags:
 - latex
 - emacs
@@ -14,15 +14,15 @@ categories:
 
 <!--more-->
 
-| 公式代码                               | 展示效果                               |
+|公式代| 展示效果|
 | ---------------------------------- | ---------------------------------- |
 | `\times`                           | $\times$                           |
 | `\rightarrow`                      | $\rightarrow$                      |
 | `A_{x}`                            | $A_{x}$                            |
 | `A^{x}`                            | $A^{x}$                            |
-| `\mbox{汉语}`                        | $\mbox{汉语}$                        |
+| `\mbox{汉语}`                      | $\mbox{汉语}$                      |
 | `\geq`                             | $\geq$                             |
-| `a\qquad b`                        | $a \qquad b$                       |
+| `a\qquad b`(a b 之间留空)                        | $a \qquad{b}$                       |
 | `\overline{CS}`                    | $\overline{CS}$                    |
 | `\underline{CS}`                   | $\underline{CS}$                   |
 | `\neq`                             | $\neq$                             |
@@ -59,7 +59,6 @@ a_2 \\
 a_n \\
 \end{matrix}
 \right], \tag{1, 1}
-
 $$
 
 矩阵
@@ -84,7 +83,6 @@ a_{21} & a_{22} & \dots & a_{2n} \\
 a_{m1} & a_{m2} & \dots & a_{mn} \\
 \end{matrix}
 \right], \tag{2, 1}
-
 $$
 
 转置
@@ -143,7 +141,6 @@ $$
 \mathbf{a_m^{\mathsf{T}}} \\
 \end{matrix}
 \right] \tag{4, 1}
-
 $$
 
 以上，以后有新的再添加。
