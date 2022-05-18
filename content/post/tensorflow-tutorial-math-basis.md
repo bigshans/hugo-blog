@@ -15,7 +15,7 @@ categories:
 
 ## 导入
 
-``` python
+```python
 import tensorflow as tf
 ```
 
@@ -25,7 +25,7 @@ import tensorflow as tf
 
 所谓标量，就是只有大小、没有方向、可用实数表示的一个量。在 tensorflow 中，我们使用 只有一个元素的张量表示，它可以被正常用于加减乘除。对于我们来说，实际上它就是一个数。
 
-``` python
+```python
 x = tf.constant([3.0])
 y = tf.constant([2.0])
 
@@ -38,12 +38,13 @@ x + y, x * y, x / y, x**y
 
 在 tensorflow 里我们使用一维张量处理向量。
 
-``` python
+```python
 x = tf.range(4)
 x
 ```
 
 习惯上，我们使用列向量来表示：
+
 $$
 \mathbf{x} = \left[ \\
 \begin{matrix}
@@ -57,13 +58,13 @@ $$
 
 其中 $a_1 , \dots, a_n$ 都是向量的元素，我们使用索引来访问任何一个元素。
 
-``` python
+```python
 x[3]
 ```
 
 显而易见的，向量只有一维，它因此存在一个长度。通过 `len()` 即可以获得。
 
-``` python
+```python
 len(x)
 ```
 
@@ -74,13 +75,11 @@ x.shape
 # TensorShape([4])
 ```
 
-
-
 ### 矩阵
 
 我们一步步前进你就会发现，标量到向量，意味着我们从零维到达了一维，而从向量到矩阵，我们则从一维到达了二维。矩阵在形式上是由 $m \times n$ 个元素组成的 $m$ 行 $n$ 列的元素几何，在代码中，被表示为具有两个轴的张量。
 
-``` python
+```python
 A = tf.reshapre(tf.range(20), (5, 4))
 A
 ```
@@ -88,6 +87,7 @@ A
 这里我们使用 `reshapre()` 创建了一个矩阵。
 
 在数学表示法中，我们使用 $\mathbf{A} \in \mathbb{R}^{m\times n}$ 来表示矩阵，其由 $m$ 行和 $n$ 列的实值标量组成。直观地，我们可以将任意矩阵 $\mathbf{A} \in \mathbb{R}^{m\times n}$ 视为一个表格，其中每个元素 $a_{ij}$ 属于第 $i$ 行第 $j$ 列：
+
 $$
 \mathbf{x} = \left[
 \begin{matrix}
@@ -98,15 +98,17 @@ a_{m1} & a_{m2} & \dots & a_{mn} \\
 \end{matrix}
 \right], \tag{2, 1}
 $$
+
 如果 $m = n$ ，则称之为方矩阵。
 
 有时候我们想要翻转矩阵。当我们交换举轴和列时，其结果成为矩阵的转置（transpose）。我们用 $\mathbf{B} = \mathbf{A^\mathrm{T}}$ 。我用使用 `tf.transpose()` 进行转置。
 
-``` python
+```python
 tf.transpose(A)
 ```
 
 比如我们对 `(2, 1)` 进行转置就得到了 `(2, 2)` 。
+
 $$
 \mathbf{x} = \left[
 \begin{matrix}
@@ -117,11 +119,12 @@ a_{1n} & a_{n2} & \dots & a_{mn} \\
 \end{matrix}
 \right], \tag{2, 2}
 $$
+
 如果 $\mathbf{A} = \mathbf{A^{\mathrm{T}}}$ ，则该矩阵我们称为对称矩阵。
 
 我们可以用代码简单证明一下。
 
-``` python
+```python
 B = tf.constant([[1, 2, 3], [2, 0, 4], [3, 4, 5]])
 B == tftranspose(B)
 '''
@@ -139,7 +142,7 @@ array([[ True,  True,  True],
 
 想看的话戳这里：https://www.bilibili.com/video/BV1dJ411W7Xm/ 。
 
-``` python
+```python
 X = tf.reshapre(tf.range(24), (2, 3, 4))
 X
 '''
@@ -159,7 +162,7 @@ array([[[ 0,  1,  2,  3],
 
 我们可以将任意两个具有相同形状的张量进行二元运算，得到的结果也必然是相同形状的张量。
 
-``` python
+```python
 A = tf.reshape(tf.range(20, dtype=tf.float32), (5, 4))
 B = A  # 不能通过分配新内存将A克隆到B
 A, A + B
@@ -181,6 +184,7 @@ output:
 ```
 
 具体而言，两个矩阵按元素乘法成为*哈达玛积*（Hadamard product，数学符号 $\odot$）。对于矩阵 $\mathbf{B} \in \mathbb{R}^{m \times n}$ ，其中第 $i$ 行和第 $j$ 列的元素是 $b_{ij}$ 。矩阵 $\mathbf{A}$ （定义 `2，1`）和 $\mathbf{B}$ 的哈达玛积为：
+
 $$
 \mathbf{A} \odot \mathbf{B} = \left[
 \begin{matrix}
@@ -192,13 +196,13 @@ a_{m1}b_{m1} & a_{m2}b_{m2} & \dots & a_{mn}b_{mn} \\
 \right], \tag{3, 1}
 $$
 
-``` python
+```python
 A * B
 ```
 
 将张量乘以或加上一个标量不会改变张量的形状，其中张量的每个元素都将与标量相加或相乘。
 
-``` python
+```python
 a = 2
 X = tf.reshape(tf.range(24), (2, 3, 4))
 a + X, (a * X).shape
@@ -220,7 +224,7 @@ output:
 
 我们可以对任何张量计算其元素的和。在数学表示法中，我们使用 $\sum$ 来表示求和，为了表示向量中元素的总和，可以记为 $\sum_{i=1}^{d}x_i$ 。在 tensorflow 中，我们调用 `tf.reduce_sum()` 来计算求和。
 
-``` python
+```python
 x = tf.range(4, dtype=tf.float32)
 x, tf.reduce_sum(x)
 ```
@@ -233,7 +237,7 @@ A.shape, tf.reduce_sum(A)
 
 默认情况下，调用求和函数会沿所有的轴降低张量的维度，使它变为一个标量。 我们还可以指定张量沿哪一个轴来通过求和降低维度。
 
-``` python
+```python
 A_sum_axis0 = tf.reduce_sum(A, axis=0)
 A_sum_axis0, A_sum_axis0.shape
 '''
@@ -249,7 +253,7 @@ output:
 
 有时候维度保持住还是非常有用的。
 
-``` python
+```python
 sum_A = tf.reduce_sum(A, axis=1, keepdims=True)
 sum_A
 '''
@@ -265,7 +269,7 @@ array([[ 6.],
 
 如果我们想沿某个轴计算`A`元素的累积总和，比如`axis=0`（按行计算），我们可以调用`tf.cumsum()`函数。此函数不会沿任何轴降低输入张量的维度。
 
-``` python
+```python
 tf.cumsum(A, axis=0)
 '''
 output:
@@ -282,7 +286,7 @@ array([[ 0.,  1.,  2.,  3.],
 
 所谓点积（Dot Product），即给定两个向量 $\mathbf{x}, \mathbf{y} \in \mathbb{R}^d$ ，它们的点积为 $\mathbf{x} \cdot \mathbf{y}$ （或 $\left<\mathbf{x}, \mathbf{y}\right>$），计算为相同位置的按元素成绩的和： $\mathbf{x \cdot y} = \sum_{i=1}^{d}x_iy_i$ 。
 
-``` python
+```python
 y = tf.ones(4, dtype=tf.float32)
 x, y, tf.tensordot(x, y, axes=1)
 '''
@@ -295,7 +299,7 @@ output:
 
 其实也可以直接相加。
 
-``` python
+```python
 tf.redice_sum(x * y)
 ```
 
@@ -306,6 +310,7 @@ tf.redice_sum(x * y)
 现在，我们知道如何计算点积，我们可以开始计算*矩阵向量积*（matrix-vector product）了。这个实际上是一个过渡内容。
 
 我们首先将矩阵 $\mathbf{A}$ 用行向量表示：
+
 $$
 \mathbf{A} = \left[
 \begin{matrix}
@@ -316,7 +321,9 @@ $$
 \end{matrix}
 \right] \tag{4, 1}
 $$
+
 其中，$\mathbf{a_i^{\mathsf{T}}} \in \mathbb{R}^n$ 都是行向量，表示矩阵第 $i$ 行。矩阵向量积 $\mathbf{Ax}$ 是一个长度为 $m$ 的列向量：
+
 $$
 \mathbf{Ax} = \left[
 \begin{matrix}
@@ -340,6 +347,7 @@ $$
 现在我们学习矩阵乘法。
 
 假设我们有两个矩阵 $\mathbf{A} \in \mathbb{R}^{n\times k}$ 和 $\mathbf{B} \in \mathbb{R}^{n\times k}$ ：
+
 $$
 \mathbf{A} = \left[
 \begin{matrix}
@@ -358,7 +366,9 @@ b_{n1} & b_{n2} & \dots & b_{nk} \\
 \end{matrix}
 \right] \tag{5, 1}
 $$
+
 用行向量 $\mathbf{a_i^{\mathsf{T}}} \in \mathbb{R}^k$ 表示矩阵 $\mathbf{A}$ 的第 $i$ 行，并让列向量 $\mathbf{b_j} \in \mathbb{R}^k$ 表示矩阵 $\mathbf{B}$ 的第 $j$ 列，则
+
 $$
 \mathbf{A} = \left[
 \begin{matrix}
@@ -377,7 +387,9 @@ $$
 \end{matrix}
 \right] \tag{5, 2}
 $$
+
 当我们简单地将每个元素 $c_{ij}$ 计算为点积 $\mathbf{a_i^\mathsf{T}b_j}$:
+
 $$
 \mathbf{C} =
 \mathbf{AB} = \left[
@@ -403,9 +415,10 @@ $$
 \end{matrix}
 \right] \tag{5, 3}
 $$
+
 我们可以将矩阵-矩阵乘法 $\mathbf{AB}$ 看作是简单地执行 $m$ 次矩阵-向量积，并将结果拼接在一起，形成一个 $m\times n$ 矩阵。在下面的代码中，我们在 `A` 和 `B` 上执行矩阵乘法。这里的 `A` 是一个5行4列的矩阵， `B` 是一个4行3列的矩阵。相乘后，我们得到了一个5行3列的矩阵。
 
-``` python
+```python
 B = tf.ones((4, 3), dtype=float64)
 tf.matmul(A, B)
 '''
@@ -428,26 +441,31 @@ array([[ 6.,  6.,  6.],
 给定任意向量 $\mathbf{x}$ ，
 
 - 性质一，如果我们按常数因子 $\alpha$ 缩放向量的所有元素，其范数也会按照相同常数因子的绝对值缩放：
+  
   $$
   f\left(\alpha\mathbf{x}\right) = \left|\alpha\right|f\left(\mathbf{x}\right)
   $$
-  
+
 - 性质二，三角不等式：
+  
   $$
   f\left(\mathbf{x+y}\right) \le f\left(\mathbf{x}\right) + f\left(\mathbf{y}\right)
   $$
 
 - 性质三，非负性：
+  
   $$
   f\left(\mathbf{x}\right) \ge 0
   $$
 
 - 性质四，范数最小为 0 ，当且仅当全部向量全由 0 组成：
+  
   $$
   \forall_i,\left[\mathbf{x}\right]_i = 0 \Leftrightarrow f\left(\mathbf{x}\right) = 0
   $$
 
 举个例子，比如 $L_2$ 范数欧几里德距离。假设 $n$ 维向量 $\mathbf{x}$ 中的元素是 $x_1, \cdots , x_n$ ,其中 $L_2$ 是向量元素平方和的平方根：
+
 $$
 \left \| \mathbf{x} \right \|_2 = \sqrt{\sum_{i=1}^{n} x_i^2}
 $$
@@ -464,26 +482,30 @@ output:
 ```
 
 在深度学习中，我们更常使用 $L_2$ 范数的平方，你还会遇到 $L_2$ 范数，它表示为向量元素的绝对值之和：
+
 $$
 \left\| \mathbf{x} \right\|_1 = \sum_{i=1}^{n} \left|x_i\right|
 $$
 
-``` python
+```python
 tf.reduce_sum(tf.abs(u))
 ```
 
 $L_1$ 范数和 $L_2$ 范数都是更一般的 $L_p$ 范数的特例：
+
 $$
 \left\| \mathbf{x} \right\|_p = \left(\sum_{i=1}^{n} \left|x_i\right|^p\right)^{1/p}
 $$
 
 类似于向量的 $L_2$ 范数，矩阵 $\mathbf{X} \in \mathbb{R}^{m\times n}$ 的*弗罗贝尼乌斯范数*（Frobenius norm）是矩阵元素平方和的平方根：
+
 $$
 \left \| \mathbf{X} \right \|_F = \sqrt{\sum_{i=1}^{m} \sum_{j=1}^n x_{ij}^2}
 $$
+
 弗罗贝尼乌斯范数满足向量范数的所有性质，它就像是矩阵形向量的 $L_2$ 范数。 调用以下函数将计算矩阵的弗罗贝尼乌斯范数。
 
-``` python
+```python
 tf.norm(tf.ones((4, 9)))
 '''
 output:
@@ -496,15 +518,19 @@ output:
 ### 导数
 
 假设我们有一个函数 $f：\mathbb{R}^n \rightarrow \mathbb{R}$ ，其输入输出都是标量。 $f$ 的**导数**被定义为
+
 $$
 f'\left(x\right) = \lim_{h\rightarrow\infty} \frac{f(x + h) - f(x)}{h} ,
 $$
+
 如果 $f'(a)$ 存在，则称 $f$ 在 $a$ 处是**可微**（differentiable）的。如果*f*在一个区间内的每个数上都是可微的，则此函数在此区间中是可微的。我们可以将导数 $f'(x)$ 解释为 $f(x)$ 相对于 $x$ 的*瞬时*（instantaneous）变化率。所谓的瞬时变化率是基于 $x$ 中的变化 $h$ ，且$h$ 接近 0 。
 
 让我们熟悉一下导数的几个等价符号。给定 $y=f(x)$ ，其中 $x$ 和 $y$ 分别是函数 $y$ 的自变量和因变量。以下表达式是等价的：
+
 $$
 f'(x) = y' = \frac{dy}{dx} = \frac{df}{dx} = \frac{d}{dx} f(x) = Df{x} = D_xf{x},
 $$
+
 其中符号 $\frac{d}{dx}$ 和 $D$ 是微分运算符，表示微分操作。我们可以使用一下规则来对常数求微分：
 
 - $DC = 0$ （$C$ 是一个常数）
@@ -515,64 +541,75 @@ $$
 为了微分一个由一些简单函数（如上面的常见函数）组成的函数，下面的法则使用起来很方便。 假设函数 $f$ 和 $g$ 都是可微的， $C$ 是一个常数，我们有：
 
 - 常数相乘法则
+  
   $$
   \frac{d}{dx}\left[Cf(x)\right] = C\frac{d}{dx}f(x),
   $$
 
 - 加法法则
+  
   $$
   \frac{d}{dx}[f(x) + g(x)] = \frac{d}{dx}f(x) + \frac{d}{dx} g(x),
   $$
 
 - 乘法法则
+  
   $$
   \frac{d}{dx}[f(x)g(x)] = f(x)\frac{d}{dx}[g(x)] + g(x)\frac{d}{dx}[f(x)],
   $$
 
 - 除法法则
+  
   $$
   \frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{g(x)\frac{d}{dx}\left[f(x)]-f(x)\frac{d}{dx}\left[g(x)\right]\right]}{[g(x)]^2}
   $$
-
 
 ### 偏导数
 
   到目前为止，我们只讨论了仅含一个变量的函数的微分。在深度学习中，函数通常依赖于许多变量。因此，我们需要将微分的思想推广到这些*多元函数*（multivariate function）上。
 
   设 $y=f(x_1,x_2,\cdots,x_n)$ 是一个具有 $n$ 个变量的函数。 $y$ 关于第 $i$ 个参数 $x_i$ 的**偏导数**（partial derivative）为：
+
 $$
-  \frac{\partial y}{\partial x_i} = \lim_{h \rightarrow \infty} \frac{f(x_1,\cdots,x_{i-1}, x_i+h, x_{i+1}, \cdots, x_n) - f(x_1, \cdots, x_i, \cdots, x_n)}{h}
+\frac{\partial y}{\partial x_i} = \lim_{h \rightarrow \infty} \frac{f(x_1,\cdots,x_{i-1}, x_i+h, x_{i+1}, \cdots, x_n) - f(x_1, \cdots, x_i, \cdots, x_n)}{h}
 $$
+
   为了计算 $\frac{\partial y}{\partial x_i}$ ，我们可以简单地将 $x_1, \cdots, x_{i-1}, x_{i+1}, \cdots， x_n$ 看作常数。对于偏导数的表示，一下是等价的：
+
 $$
-  \frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = f_i = D_if=D_{x_i}f
+\frac{\partial y}{\partial x_i} = \frac{\partial f}{\partial x_i} = f_{x_i} = f_i = D_if=D_{x_i}f
 $$
 
 ### 梯度
 
   我们可以连结一个多元函数对其所有变量的偏导数，以得到该函数的*梯度*（gradient）向量。设函数 $f：\mathbb{R}^n \rightarrow \mathbb{R}$ 输入的是一个 $n$ 维向量 $\mathbf{x} = [x_1, x_2, \cdots, x_n]^{\mathsf{T}}$ ，并且输出的是一个标量。函数 $f(\mathbf{x})$ 相对于 $\mathbf{x}$ 的梯度是一个包含 $n$ 个偏导数的向量：
+
 $$
-  \nabla_xf(x) = \left[\frac{\partial f(x)}{\partial x_1}, \frac{\partial f(x)}{\partial x_2}, \cdots, \frac{\partial f(x)}{\partial x_n}\right]^{\mathsf{T}},
+\nabla_xf(x) = \left[\frac{\partial f(x)}{\partial x_1}, \frac{\partial f(x)}{\partial x_2}, \cdots, \frac{\partial f(x)}{\partial x_n}\right]^{\mathsf{T}},
 $$
+
   其中 $\nabla_xf(x)$ 通常在没有歧义时被 $\nabla f(x)$ 取代。
 
   假设 $\mathbf{x}$ 为 $n$ 维向量，在微分多元函数时经常使用一下规则：
 
-  - 对于所有 $\mathbf{A} \in \mathsf{R}^{m\times n}$ ，都有 $\nabla_{\mathbf{x}}\mathbf{Ax} = \mathbf{A}^{\mathsf{T}}$
-  - 对于所有 $\mathbf{A} \in \mathsf{R}^{m\times n}$ ，都有 $\nabla_{\mathbf{x}}\mathbf{x^{\mathsf{T}}A} = \mathbf{A}$
-  - 对于所有 $\mathbf{A} \in \mathsf{R}^{m\times n}$ ，都有 $\nabla_{\mathbf{x}}\mathbf{A_x} = \mathbf{(A+A^{\mathsf{T}})x}$
-  - $\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\mathbf{\nabla_{x} x^{\mathsf{T}}x}=2\mathbf{x}$
-  - 对于任何矩阵 $\mathbf{X}$ ，我们都有 $\nabla_{\mathbf{x}}\|\mathbf{X}\|_F^2 = 2\mathbf{X}$ 。
+- 对于所有 $\mathbf{A} \in \mathsf{R}^{m\times n}$ ，都有 $\nabla_{\mathbf{x}}\mathbf{Ax} = \mathbf{A}^{\mathsf{T}}$
+- 对于所有 $\mathbf{A} \in \mathsf{R}^{m\times n}$ ，都有 $\nabla_{\mathbf{x}}\mathbf{x^{\mathsf{T}}A} = \mathbf{A}$
+- 对于所有 $\mathbf{A} \in \mathsf{R}^{m\times n}$ ，都有 $\nabla_{\mathbf{x}}\mathbf{A_x} = \mathbf{(A+A^{\mathsf{T}})x}$
+- $\nabla_{\mathbf{x}}\|\mathbf{x}\|^2=\mathbf{\nabla_{x} x^{\mathsf{T}}x}=2\mathbf{x}$
+- 对于任何矩阵 $\mathbf{X}$ ，我们都有 $\nabla_{\mathbf{x}}\|\mathbf{X}\|_F^2 = 2\mathbf{X}$ 。
 
 ### 链式法则
 
 然而，上面方法可能很难找到梯度。 这是因为在深度学习中，多元函数通常是*复合*（composite）的，所以我们可能没法应用上述任何规则来微分这些函数。 幸运的是，链式法则使我们能够微分复合函数。
 
 让我们先考虑单变量函数。假设函数 $y=f(u)$ 和 $u=g(x)$ 都是可微的，根据链式法则：
+
 $$
 \frac{dy}{dx} = \frac{dy}{du}\frac{du}{dx},
 $$
+
 现在让我们把注意力转向一个更一般的场景，即函数具有任意数量的变量的情况。假设可微分函数 $y$ 有变量 $u_1, u_2, \cdots , u_m$ ，其中每个可微分函数 $u_i$ 都有变量 $x_1, x_2, \cdots ,x_n$ 。注意，的函数。对于任意 $i = 1, 2, \cdots, n$ ，链式法则给出：
+
 $$
 \frac{dy}{dx_i} = \frac{dy}{du_1}\frac{du_1}{dx_i} + \frac{dy}{du_2}\frac{du_2}{dx_i} + \cdots + \frac{dy}{du_m}\frac{du_m}{dx_i}
 $$
@@ -598,13 +635,13 @@ output:
 
 在我们计算 $y$ 关于 $\mathbf{x}$ 的梯度之前，我们需要一个地方来存储梯度。重要的是，我们不会在每次对一个参数求导时都分配新的内存。因为我们经常会成千上万次地更新相同的参数，每次都分配新的内存可能很快就会将内存耗尽。
 
-``` python
+```python
 x = tf.Variable(x)
 ```
 
 现在我们计算 $y$ 。
 
-``` python
+```python
 # 把所有计算记录在磁带上
 with tf.GradientTape() as t:
     y = 2 * tf.tensordot(x, x, axes=1)
@@ -617,7 +654,7 @@ output:
 
 `x`是一个长度为4的向量，计算`x`和`x`的内积，得到了我们赋值给`y`的标量输出。接下来，我们可以通过调用反向传播函数来自动计算`y`关于`x`每个分量的梯度，并打印这些梯度。
 
-``` python
+```python
 x_grad = t.gradient(y, x)
 x_grad
 '''
@@ -637,7 +674,7 @@ x_grad == 4 * x
 
 现在让我们计算`x`的另一个函数。
 
-``` python
+```python
 with tf.GradienTape() as t:
     y = tf.reduce_sum(x)
 t.gradient(y, x)
@@ -664,7 +701,7 @@ output:
 
 在这里，我们可以分离`y`来返回一个新变量`u`，该变量与`y`具有相同的值，但丢弃计算图中如何计算`y`的任何信息。换句话说，梯度不会向后流经`u`到`x`。因此，下面的反向传播函数计算`z=u*x`关于`x`的偏导数，同时将`u`作为常数处理，而不是`z=x*x*x`关于`x`的偏导数。
 
-``` python
+```python
 # 设置 `persistent=True` 来运行 `t.gradient`多次
 with tf.GradientTape(persistent=True) as t:
     y = x * x
@@ -769,6 +806,7 @@ d_grad == d / a
 联立， $P(B|A)P(A)=P(A|B)P(B)$ 。
 
 假设 $P(B) > 0$ ,我们就得到了
+
 $$
 P(A|B) = \frac{P(B|A)P(A)}{P(B)}，
 $$
@@ -776,9 +814,11 @@ $$
 ### 边际化
 
 边际化是从 $P(A, B)$ 中确定 $P(B)$ 的操作。我们可以看到 $B$ 的概率相当于计算 $A$ 的所有可能选择，并将所有选择的连接概率聚合在一起，就可以得到 $B$ 的概率。
+
 $$
 P(B) = \sum_AP(A,B),
 $$
+
 这也称为*求和规则*。边际化结果的概率或分布称为*边际概率*或*边际分布*。
 
 ### 独立性
@@ -790,18 +830,25 @@ $$
 ### 期望和差异
 
 为了概括概率分步的关键特征，我们需要一些测量方法。随机变量 $X$ 的**期望**表示为
+
 $$
 E[X] = \sum_xxP(X = x).
 $$
+
 当函数 $f(x)$ 的输入是从分步 $P$ 中出去的随机变量时， $f(x)$ 的期望为
+
 $$
 E_{x \sim p}[f(x)] = \sum_xf(x)P(x).
 $$
+
 在许多情况下，我们希望衡量随机变量 $X$ 与其期望值的偏置。这可以通过方差来量化
+
 $$
 \mathrm{Var}[X] = E[(X-E[X]^2)] = E[X^2] - E[X]^2.
 $$
+
 他们的平方根被称为**标准差**（standard deviation）。随机变量函数的方差衡量的是，当该随机变量分步中采样不同值 $x$ 时，函数值偏离该函数期望的程度：
+
 $$
 \mathrm{Var}[f(x)] = E[(f(x) - E[f(x)])^2]
 $$
