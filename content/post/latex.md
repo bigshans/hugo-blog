@@ -14,7 +14,7 @@ categories:
 
 <!--more-->
 
-|公式代| 展示效果|
+| 公式代                             | 展示效果                           |
 | ---------------------------------- | ---------------------------------- |
 | `\times`                           | $\times$                           |
 | `\rightarrow`                      | $\rightarrow$                      |
@@ -22,7 +22,7 @@ categories:
 | `A^{x}`                            | $A^{x}$                            |
 | `\mbox{汉语}`                      | $\mbox{汉语}$                      |
 | `\geq`                             | $\geq$                             |
-| `a\qquad b`(a b 之间留空)                        | $a \qquad{b}$                       |
+| `a\qquad b`(a b 之间留空)          | $a \qquad{b}$                      |
 | `\overline{CS}`                    | $\overline{CS}$                    |
 | `\underline{CS}`                   | $\underline{CS}$                   |
 | `\neq`                             | $\neq$                             |
@@ -34,10 +34,15 @@ categories:
 | `\int_{0}^{5}`                     | $\int_{0}^{5}$                     |
 | `\in`                              | $\in$                              |
 | `\frac{5}{\pi}`                    | $\frac{5}{\pi}$                    |
+| `\hat{C}`                          | $\hat{C}$                          |
+| `\forall`                          | $\forall$                          |
+| `\exists`                          | $\exists$                          |
+| `\partial`                         | $\partial$                         |
+| `\mathcal{L}`                      | $\mathcal{L}$                      |
 
 多行的不太好用表格表示：
 
-向量
+向量，
 
 ```latex
 \mathbf{x} = \left[ \\
@@ -61,7 +66,7 @@ a_n \\
 \right], \tag{1, 1}
 $$
 
-矩阵
+矩阵，
 
 ```latex
 \mathbf{x} = \left[
@@ -85,7 +90,7 @@ a_{m1} & a_{m2} & \dots & a_{mn} \\
 \right], \tag{2, 1}
 $$
 
-转置
+转置，
 
 ```latex
 \mathbf{A} = \mathbf{A^{\mathrm{T}}}
@@ -95,7 +100,7 @@ $$
 \mathbf{A} = \mathbf{A^{\mathrm{T}}}
 $$
 
-哈达玛积
+哈达玛积，
 
 ```latex
 \mathbf{A} \odot \mathbf{B} = \left[
@@ -119,7 +124,7 @@ a_{m1}b_{m1} & a_{m2}b_{m2} & \dots & a_{mn}b_{mn} \\
 \right], \tag{3, 1}
 $$
 
-矩阵向量积
+矩阵向量积，
 
 ```latex
 \mathbf{A} = \left[
@@ -141,6 +146,19 @@ $$
 \mathbf{a_m^{\mathsf{T}}} \\
 \end{matrix}
 \right] \tag{4, 1}
+$$
+
+大括号，
+
+$$
+\hat{C}'_p(x)
+\left\{
+\begin{array}{lr}
+=\mu_w, & if & x_p > 0 \\
+\\
+\geq \mu_w, & if & x_p = 0,
+\end{array}
+\right.
 $$
 
 以上，以后有新的再添加。
