@@ -5,7 +5,7 @@ draft: false
 tags:
 - golang
 categories:
-- golang
+- 语言学习
 ---
 
 ## 译前序
