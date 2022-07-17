@@ -36,6 +36,14 @@ tags:
 
 </details>
 
+## 认识论
+
+<details open>
+
+1. agent-object 的模式是有问题的，应该是主体主动区选择客体，而不是反过来，客体向主体提供。
+
+</details>
+
 ## 康德
 
 <details open>
