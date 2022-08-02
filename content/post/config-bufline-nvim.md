@@ -42,6 +42,7 @@ function plugin_config:bufferline()
     local tab_group = {}
     local tabpagenr = vim.fn['tabpagenr'];
     local bufnr = vim.fn['bufnr']
+    local buflisted = vim.fn['buflisted']
     vim.api.nvim_create_autocmd({ "BufEnter" }, {
         pattern = '*',
         callback = function ()
@@ -63,17 +64,20 @@ function plugin_config:bufferline()
         pattern = '*',
         callback = function ()
             local tabId = tabpagenr()
-            local buf = bufnr()
             if tab_group[tabId] then
-                local list = {}
-                for _, v in ipairs(tab_group[tabId]) do
-                    if v == buf then
-                       goto contine
+                local new_tab_group = {}
+                for k, tab_list in ipairs(tab_group) do
+                    local list = {}
+                    for _, v in ipairs(tab_list) do
+                        if buflisted(v) > 0 then
+                            table.insert(list, v)
+                        end
                     end
-                    table.insert(list, v)
-                    ::contine::
+                    if #list ~= 0 then
+                        new_tab_group[k] = list
+                    end
                 end
-                tab_group[tabId] = list
+                tab_group = new_tab_group
             end
         end
     })
@@ -81,14 +85,21 @@ function plugin_config:bufferline()
         options = {
             enforce_regular_tabs = false,
             diagnostics = "coc",
-            diagnostics_indicator = function(count, level, diagnostics_dict, context)
+            diagnostics_update_in_insert = true,
+            diagnostics_indicator = function(count, level)
                 local icon = level:match("error") and " " or " "
                 return " " .. icon .. count
             end,
             numbers = function(opts)
-                return string.format(' %s/%s.%s', vim.fn['tabpagenr'](), opts.id, opts.ordinal)
+                return string.format(' %s/%s', vim.fn['tabpagenr'](), opts.ordinal)
             end,
             offsets = {
+                {
+                    filetype = "NvimTree",
+                    text = "File Explorer",
+                    highlight = "Directory",
+                    text_align = "left"
+                },
                 {
                     filetype = "coc-explorer",
                     text = function()
@@ -107,7 +118,7 @@ function plugin_config:bufferline()
                 }
             },
             separator_style = "slant",
-            custom_filter = function (buf_number, buf_numbers)
+            custom_filter = function (buf_number)
                 if string.match(vim.fn['bufname'](buf_number), "term") then
                     return false
                 end
@@ -124,6 +135,7 @@ function plugin_config:bufferline()
         }
     };
 end
+
 ```
 
 然后 keybindings 在 vim 中配置：
