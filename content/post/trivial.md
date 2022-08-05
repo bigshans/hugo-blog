@@ -11,3 +11,11 @@ draft: false
 ## Joi
 
 `joi.string().allow('').allow(null).empty('').optional()` ，允许字符串为空。
+
+## pacman
+
+以前记录过一遍，但太隐慝了，在此特意提出。
+
+`pacman -Ql <package-name>` ，显示包内文件。
+
+`pacman -Qi <package-name>` ，显示包内详细信息。
