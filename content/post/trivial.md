@@ -19,3 +19,19 @@ draft: false
 `pacman -Ql <package-name>` ，显示包内文件。
 
 `pacman -Qi <package-name>` ，显示包内详细信息。
+
+# git
+
+自动 push 的实现，在 `.git/hooks` 中添加 `post-commit` 脚本，并赋予执行权限即可。脚本内容为：
+
+```shell
+#!/bin/bash
+
+git push origin master
+```
+
+# 配色
+
+阮一峰网站配色： bg = #F5F5D5 ， fg = #111 。
+
+我的博客配色： bg = #FEFEFE ， fg = #000 .
