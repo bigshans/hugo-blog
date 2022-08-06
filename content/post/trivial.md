@@ -41,3 +41,7 @@ git push origin master
 如果要强制覆盖的话，使用 `-f` 选项，如 Arch 安装指导里就有 `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime` 的示例。
 
 `ln` 命令的两个地址，第一个是**源地址**，第二个是**目标地址**，我经常搞混。如果只输入一个地址，就是在当前目录下创建一个链接，连到目标地址上去。
+
+## 软件
+
+`screenkey` 录制屏幕快捷键的软件。
