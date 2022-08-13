@@ -119,7 +119,7 @@ function plugin_config:bufferline()
             },
             separator_style = "slant",
             custom_filter = function (buf_number)
-                if string.match(vim.fn['bufname'](buf_number), "term") then
+                if string.match(vim.fn['bufname'](buf_number), "^term://") then
                     return false
                 end
                 local tabId = tabpagenr()
