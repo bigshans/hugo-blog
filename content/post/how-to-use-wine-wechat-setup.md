@@ -3,9 +3,9 @@ title: "如何使用 wine-wechat-setup"
 date: 2022-07-27T14:05:02+08:00
 draft: false
 categories:
-- 软件体验
+- HACK
 tags:
-- 软件体验
+- HACK
 ---
 
 最近升级了一下微信，好久没有这个脚本好像都不会用了。此脚本是依云姐写的，在 Archlinuxcn 源上，需要配合 wine-for-wechat 。
