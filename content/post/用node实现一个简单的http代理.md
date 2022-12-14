@@ -1,5 +1,5 @@
 ---
-title: "用node实现一个简单的http代理"
+title: "用 node 实现一个简单的 http 代理"
 date: 2022-12-12T22:52:19+08:00
 lastmod: 2022-12-14T07:58:17.435Z
 markup: pandoc
@@ -108,4 +108,5 @@ curl -x http://0.0.0.0:8888 https://baidu.com
 
 ---
 
-参考：https://juejin.cn/post/6998351770871152653
+
+参考：[HTTP 代理原理及实现 ](https://juejin.cn/post/6998351770871152653)
