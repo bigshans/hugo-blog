@@ -1,7 +1,7 @@
 ---
 title: "用 node 实现一个简单的 http 代理"
 date: 2022-12-12T22:52:19+08:00
-lastmod: 2022-12-14T07:58:17.435Z
+lastmod: 2022-12-15T03:59:33Z
 markup: pandoc
 draft: false
 categories:
@@ -84,7 +84,7 @@ function request(cReq, cRes) {
 
 function connect(cReq, cSock) {
   const u = url.parse('http://' + cReq.url);
-  const pSock = net.connect(u.port, hostname, () => {
+  const pSock = net.connect(u.port, u.hostname, () => {
     cSock.write('HTTP/1.1 200 Connection Established\r\n\r\n');
     pSock.pipe(cSock);
   }).on('error', (e) => {
@@ -105,6 +105,62 @@ http.createServer()
 ```shell
 curl -x http://0.0.0.0:8888 https://baidu.com
 ```
+
+## 反向代理
+
+学会了用 node 实现一个简单的正向代理，那么我们同样可以实现一个简单的反代。
+
+```javascript
+const http = require('http');
+const url = require('url');
+const net = require('net');
+
+function request(cReq, cRes) {
+  const u = url.parse(cReq.url);
+  const options = {
+    hostname: u.hostname ?? "127.0.0.1",
+    port: u.hostname == null ? 3000 : u.port,
+    path: u.path,
+    method: cReq.method,
+    headers: cReq.headers,
+  };
+  console.log(options);
+  const pReq = http.request(options, (pRes) => {
+    cRes.writeHead(200, pRes.statusCode);
+    pRes.pipe(cRes);
+  }).on('error', (e) => {
+    console.error(e);
+    cRes.end();
+  });
+  cReq.pipe(pReq);
+}
+
+function connect(cReq, cSock) {
+  const u = url.parse('http://' + cReq.url);
+  const port = u.hostname == null ? 3000 : u.port;
+  const pSock = net.connect(port, u.hostname ?? "127.0.0.1", () => {
+    cSock.write('HTTP/1.1 200 Connection established\r\n\r\n');
+    pSock.pipe(cSock);
+  }).on('error', (e) => {
+    console.error(e);
+    cSock.end();
+  });
+  cSock.pipe(pSock);
+}
+
+http.createServer()
+  .on('connect', connect)
+  .on('request', request)
+  .listen(80);
+```
+
+我们用 `curl` 测试一下：
+
+```shell
+curl http://0.0.0.0
+```
+
+80 端口需要 root 权限才能启动。同时，直接访问本地， `hostname` 会直接为 `null` ，这里我们需要一些额外的修正，其余的并不是很困难。
 
 ---
 
