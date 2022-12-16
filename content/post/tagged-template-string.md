@@ -1,6 +1,7 @@
 ---
 title: "JavaScript 的标签模板字符串"
 date: 2022-12-16T10:49:05+08:00
+lastmod: 2022-12-16T03:28:49Z
 markup: pandoc
 draft: false
 categories:
@@ -11,20 +12,20 @@ tags:
 
 标签模板是个看起来很 Magic 的语法，写起来像是这样。
 
-```JavaScript
+```javascript
 console.log`Hello, World!`;
 // Output: ["Hello, World!"]
 ```
 
 实际上，这里的模板标签被转换成这样的一句调用。
 
-```JavaScript
+```javascript
 console.log.call(console, ['Hello, World!']);
 ```
 
 如果我们有用变量的话，
 
-```JavaScript
+```javascript
 const name = 'world';
 console.log`Hello, ${name}!`
 // Output: [ 'Hello, ', '!' ] world
@@ -32,9 +33,16 @@ console.log`Hello, ${name}!`
 
 就会被转换成这样一句调用。
 
-```JavaScript
+```javascript
 const name = 'world';
 console.log.call(console, ['Hello, ', '!'], name);
+```
+
+相当于：
+
+```javascript
+const name =  'world';
+console.log(['Hello, ', '!'], name);
 ```
 
 这不代表 V8 确实会这样做，但 ECMAScript 标准是这样规定的。
@@ -51,4 +59,22 @@ console.log.call(console, ['Hello, ', '!'], name);
 function tagged(strings, ...templates) {}
 ```
 
-标签模板的好处是，我们可以省去一些括号，而获得一些更简洁的写法。
+标签模板的好处是，我们可以省去一些括号，而获得一些更简洁的写法。当然，如此自由的写法，当然也会带来一些疑惑。
+
+```javascript
+[].sort.call`${alert}1337`
+```
+
+看不明白，转换一下：
+
+```javascript
+[].sort.call(['1337'], alert);
+// equal to
+['1337'].sort(alert);
+```
+
+我觉得这样用多少有些反直觉。
+
+---
+
+参考： [tc39 - sec-tagged-templates](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-tagged-templates)
