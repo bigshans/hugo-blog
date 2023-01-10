@@ -42,15 +42,21 @@ CSS 还提供了简写 `flex-flow` 用来同时设置 `flex-direction` 和 `flex
 
 ## `flex-grow` 、`flex-shrink` 、 `flex-basis` —— flex item 的属性
 
-`flex-grow` 、`flex-shrink` 和 `flex-basis` 这三个属性有一个简写—— `flex` 。
+`flex` 属性是对 `flex-grow` 、`flex-shrink` 和 `flex-basis` 三个属性的一个快速书写。
 
 想要熟练使用 `flex` 属性，就必须要弄懂 `flex-grow` 、`flex-shrink` 和 `flex-basis` 。
 
+事实上，这三个属性分别对应了 flex 布局所要做的伸长、缩短和初始长度三件事。
+
 ### `flex-grow`
+
+即伸长。
 
 `flex-grow` 生效于当 flex 容器主尺寸大于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸大于各个 flex item 尺寸之和时，浏览器会将剩余空间按照各个 flex item 的 `flex-grow` 设定分配给各个 flex item 。例如，当  flex 容器有 3 个子元素，若 3 个子元素的 `flex-grow` 都设定为 1 时，那么浏览器就会将剩下的空间按照 1:1:1 比例进行分配，追加到子元素后面。
 
 ### `flex-shrink`
+
+即缩短。
 
 `flex-shrink` 生效于当 flex 容器主尺寸小于各个 flex item 尺寸之和时，默认值为 0 。当 flex 容器主尺寸小于各个 flex item 尺寸之和时，浏览器会按照子元素 `flex-shrink` 设定进行分配缩放。例如，当  flex 容器有 3 个子元素，若 flex 容器为 100px ，子元素的 `flex-shrink` 分别设定为 A 、B 元素 1 ，C 元素 2 ，三个元素宽度都为 60px ，`3*60=180px` ，溢出容器 80px 。我们计算总权重为 `1*60+1*60+2*60=240` ，因此 A 、B 元素需要减少 `1*60/240*80=20px` ，C 元素需要减少 `2*60/240*80=40px` ，最终 A 、B 为 40px ，C 为 20px 。
 
@@ -58,11 +64,13 @@ CSS 还提供了简写 `flex-flow` 用来同时设置 `flex-direction` 和 `flex
 
 ### `flex-basis`
 
+即初始长度。
+
 `flex-basis` 设定了 flex item 在主轴方向上初始大小，默认为 `auto` ，即与 flex item 自己的大小相同。当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) ， `flex-basis` 具有更高的优先级。
 
 ### `flex` 简写
 
-`flex` 简写形式允许你把三个数值按这个顺序书写 —— `flex-grow`，`flex-shrink` ，`flex-basis` 。
+`flex` 形式允许你把三个数值按这个顺序速写 —— `flex-grow`，`flex-shrink` ，`flex-basis` 。
 
 我们可以使用一个，两个或三个值来指定 `flex` 属性。
 
