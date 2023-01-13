@@ -23,10 +23,10 @@ categories:
 
 意思是，其子元素将左右相连贴合，实际上的样子，就像清除了浮动了一样。这个要求本质上是为了让盒型保持规整，否则盒型就不是一个规则的矩形了。
 
-首先，我们设置 `div` 为 `float` 的时候， `float` 元素其实是位于一个独立的 BFC 中，这个独立的 BFC 飘在外面。关于独立的 BFC ，可以参看此链接 [independent formatting context](https://drafts.csswg.org/css-display-4/#establish-an-independent-formatting-context) 。当你设置外侧的容器 `overflow` 为非 `visible` 或是 `clip` 时，它将会根据它的内容建立新的独立上下文，也就是说，在此刻会一个包含了 `float` 元素的独立上下文进来。
+首先，我们设置 `div` 为 `float` 的时候， `float` 元素其实是位于一个独立的 BFC 中，这个独立的 BFC 飘在外面。关于独立的 BFC ，可以参看此链接 [independent formatting context](https://drafts.csswg.org/css-display-4/#establish-an-independent-formatting-context) 。当你设置外侧的容器 `overflow` 为非 `visible` 或是 `clip` 时，独立上下文将会根据它的内容建立新的独立上下文。
 
 > For example, in a block formatting context, floated boxes affect the layout of surrounding boxes. But their effects do not escape their formatting context: the box establishing their formatting context grows to fully contain them, and floats from outside that box are not allowed to protrude into and affect the contents inside the box. 
 
-独立 BFC 会无视 `float` 的作用，并直接把它包含进来。
+独立 BFC 会无视 `float` 的作用，并直接把它包含进来。也就是说，在此刻会一个包含了 `float` 元素的独立上下文进来。
 
 实际上， `clear` 与盒型的方法是完全不一样的， `clear` 并没有建立新的上下文，因此原有容器的大小其实并没有变，但 BFC 的方法实际上是创建了一个新的盒型，大小也会发生变化，大家可以自己写代码测试一下。当然，现代布局用 `flex` 和 `grid` 其实是更好的方案，因为用 `float` 做如此布局其实违背了当初设计 `float` 的本愿。
