@@ -2,6 +2,7 @@
 title: "如何破解 Gitkraken"
 date: 2023-02-18T09:26:22+08:00
 markup: pandoc
+private: true
 draft: false
 categories:
 - 破解
@@ -9,34 +10,4 @@ tags:
 - 破解
 - 私人
 ---
-
-因为我手头也没有便于支付 Gitkraken 的银行卡，所以只好用破解凑合一下。之前发现了 Gitkraken 的破解项目，但因为违反了版权协议，所以被 ban 了，其实只是转移到了 TG 里去。
-
-对于他们破解 Gitkraken 的原理，我也是阅读过源码，好歹也调试过的。我的方法找到关键的库文件，然后进行替换，他们是找到 Gitkraken 获取 license 的位置进行替换，原理其实差不多。但后来我的代码不好使了，估计是他们改变了库文件的用法。
-
-目前最新版破解还是很好使的，关键核心在这里，除非他们改 license 结构。
-
-```typescript
-const bundlePath = path.join(this.dir, "src/main/static/main.bundle.js");
-
-const patchedPattern = '(delete json.proAccessState,delete json.licenseExpiresAt,json={...json,licensedFeatures:["pro"]});';
-
-const pattern1 = /const [^=]*="dev"===[^?]*\?"[\w+/=]+":"[\w+/=]+";/;
-const pattern2 = /return (JSON\.parse\(\([^;]*?\)\(Buffer\.from\([^;]*?,"base64"\)\.toString\("utf8"\),Buffer\.from\([^;]*?\.secure,"base64"\)\)\.toString\("utf8"\)\))\};/;
-const searchValue = new RegExp(`(?<=${pattern1.source})${pattern2.source}`)
-const replaceValue =
-  "var json=$1;" +
-  '("licenseExpiresAt"in json||"licensedFeatures"in json)&&' +
-  '(delete json.proAccessState,delete json.licenseExpiresAt,json={...json,licensedFeatures:["pro"]});' +
-  "return json};";
-
-const sourceData = fs.readFileSync(bundlePath, "utf-8");
-const sourcePatchedData = sourceData.replace(searchValue, replaceValue);
-if (sourceData === sourcePatchedData) {
-  if (sourceData.indexOf(patchedPattern) < 0) throw new Error("Can't patch pro features, pattern match failed. Get support from https://t.me/gitkrakencrackchat");
-  throw new Error("It's already patched.");
-}
-fs.writeFileSync(bundlePath, sourcePatchedData, "utf-8");
-```
-
-[gitkrakencrackchat TG](https://t.me/gitkrakencrackchat)
+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
