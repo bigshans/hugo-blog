@@ -61,6 +61,12 @@ mount --mkdir /dev/efi_system_partition /mnt/efi
 
 其他的目录也都正常挂到 `/mnt` 上去。
 
+由于 mount 默认用的是 ntfs3g ，如果想要用 ntfs3 的话，需要使用 `-t ntfs3` 选项。
+
+```bash
+mount -t ntfs3 /dev/partition /mnt/disk
+```
+
 ## 正式安装
 
 ```bash
