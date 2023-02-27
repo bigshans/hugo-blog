@@ -1,6 +1,7 @@
 ---
 title: "重装 arch"
 date: 2023-02-26T14:01:31+08:00
+modtime: 2023-02-27T15:16:43Z
 markup: pandoc
 draft: false
 categories:
@@ -191,3 +192,9 @@ EDITOR=nvim visudo
 ## 修复 nextcloud 每次都要登录的问题
 
 删除 kwallet 之前的钱包数据。在 `~/.local/share/kwalletd` 下，删除重启。你只需要最后再授权一下，后面就不用再登录了。
+
+## 备份软件列表
+
+```bash
+comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > pkglist
+```
