@@ -68,6 +68,12 @@ mount --mkdir /dev/efi_system_partition /mnt/efi
 mount -t ntfs3 /dev/partition /mnt/disk
 ```
 
+但 ntfs3 存在一些 bug ，因此使用默认的 ntfs3g 也无妨
+
+```bash
+mount --mkdir /dev/partition /mnt/disk
+```
+
 ## 正式安装
 
 ```bash
@@ -126,6 +132,12 @@ systemctl enable iwd
 systemctl enable dhcpcd
 ```
 
+也可以安装 NetworkManager 不要忘了启用。
+
+```bash
+systemctl enable NetworkManager.service
+```
+
 ### 安装 bootloader
 
 ```bash
@@ -182,12 +194,24 @@ pacman -S thunderbird birdtray joplin-desktop keepassxc nextcloud-client konsole
 ## 添加日常用户
 
 ```bash
-useradd -m -g users -G wheel -s /bin/zsh username
-passwd username
-EDITOR=nvim visudo
+useradd -m -g users -G wheel -s /bin/zsh <username>
+passwd <username>
 ```
 
 重启进入图形界面，大致就能用了。因为沿袭了之前的数据，所以不需要再次进行配置，只需要在对应位置补上即可。
+
+## sudo 问题
+
+运行 `EDITOR=nvim visudo` 就会用 nvim 打开 sudo 的配置文件。 `EDITOR` 可以是你想要的任何值。
+
+取消掉 `%wheel ALL=(ALL:ALL) ALL` 这一行前面的 `#` 即可。
+
+添加一下内容可以保持用户的环境变量应用到 root 去。
+
+```conf
+Defaults !env_reset
+```
+等于你每次运行使用 `sudo -E` 。但不介意使用 `alias` 改变原生行为。
 
 ## 修复 nextcloud 每次都要登录的问题
 
@@ -197,4 +221,10 @@ EDITOR=nvim visudo
 
 ```bash
 comm -23 <(pacman -Qeq|sort) <(pacman -Qmq|sort) > pkglist
+```
+
+恢复可以直接使用 pkglist 。
+
+```bash
+pacman -S $(cat pkglist)
 ```
