@@ -2,7 +2,7 @@
 title: "Obsidian 使用体验"
 date: 2023-07-13T17:16:02+08:00
 markup: pandoc
-draft: true
+draft: false
 categories:
 - software
 tags:
