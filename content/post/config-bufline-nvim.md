@@ -3,10 +3,10 @@ title: '配置 bufferline.nvim'
 date: 2022-04-20T15:55:27+08:00
 draft: false
 tags:
-- nvim
-- extension
+- NVim
+- bufferline.nvim
 categories:
-- nvim
+- NVim
 ---
 
 眼馋这个 bufferline 很久了，最近想尝试一下。

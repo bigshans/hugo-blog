@@ -2,9 +2,9 @@
 title: hostname 也不要随便取
 date: 2018-09-05 18:11:35
 tags:
-- linux
+- Linux
 categories:
-- linux
+- Linux
 ---
 
 一个小问题，困扰很久了，最近解决掉了，就是不能以 root 打开任何 GUI ，打开之后不显示。

@@ -4,9 +4,10 @@ date: 2022-12-15T21:49:39+08:00
 markup: pandoc
 draft: false
 categories:
-- nodejs
+- Node
 tags:
-- nodejs
+- Node
+- V8
 ---
 
 我们一般会认为 `async/await` 是 `Promise` 的语法糖，实际上也没有错。但在 Node 10 的时候，一个 `await` 会产生三个微任务，导致单个 `await` 的性能远不如 `Promise` ，但在 Node 12 时， V8 团队称，其性能已经比一般手动创建处理的 `Promise` 好了。

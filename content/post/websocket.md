@@ -2,9 +2,10 @@
 title: 长连接与 Websocket
 date: 2019-10-27 23:11:07
 tags:
-- websocket
+- Websocket
+- Node
 categories:
-- nodejs
+- 编程随笔
 ---
 
 公司想要做一个聊天系统，原本打算上 Websocket ，我例程都写了，老板又不想弄长连接了，认为短连接就符合需求了，无奈。

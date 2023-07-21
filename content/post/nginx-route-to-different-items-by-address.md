@@ -3,7 +3,7 @@ title: "Nginx 按路由分流请求"
 date: 2021-11-30T14:04:23+08:00
 draft: false
 tags:
-- nginx
+- Nginx
 - 前端
 - 运维
 categories:

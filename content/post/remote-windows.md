@@ -7,7 +7,7 @@ tags:
 - rdesktop
 - freedesktop
 categories:
-- 远程开发
+- 编程随笔
 ---
 
 由于最近要用到 uniapp 进行开发，但是，由于项目不是 CLI 项目，所以最终还是要用到 HBuilderX 进行开发，然而，它没有 Linux 版 Orz 。不过好在公司给了我一台 Windows 电脑，所以我就想着，能不能远程连接 Windows 进行开发，因为我实在不想两台电脑换来换去。

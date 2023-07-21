@@ -5,9 +5,11 @@ lastmod: 2023-07-21T01:51:47Z
 markup: pandoc
 draft: false
 categories:
-- 开发杂谈
+- Hugo
 tags:
-- 开发杂谈
+- 开发总结
+- Hugo
+- 加密
 ---
 
 做了一些更新，现在把 private 单独放到一个路径下面，同时把私人也从 post 列表移除，从另一个地址进去。如此页面的观感就好多了。同时也对整个处理的过程进行了大幅修改，重写了原来的 script 脚本，并用 Deno 实现了主要逻辑。Shell 脚本主要是用来协调 Deno 脚本的运行的。

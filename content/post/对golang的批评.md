@@ -3,9 +3,9 @@ title: "对 Golang 的批评"
 date: 2022-08-18T03:42:04+08:00
 draft: false
 categories:
-- 开发杂谈
+- Golang
 tags:
-- 开发杂谈
+- Golang
 ---
 
 最近在用 Golang ，感觉有很多槽点。王垠曾经对 Golang 做过一番批判，我自己用的时候也感觉到了很多问题，在此我严正批评一下 Golang 。

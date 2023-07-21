@@ -2,9 +2,9 @@
 title: python3 在不同目录下 import 其他py 文件
 date: 2018-10-26 21:15:40
 tags:
-- python
+- Python
 categories:
-- python
+- Python
 ---
 
 python 的 import 机制实在是太弱。。

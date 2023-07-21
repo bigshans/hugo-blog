@@ -4,9 +4,9 @@ date: 2023-07-13T17:16:02+08:00
 markup: pandoc
 draft: false
 categories:
-- software
+- 使用体验
 tags:
-- software
+- Obsidian
 ---
 
 因为已经用了一段时间的 Obsidian ，所以整体说一下，包括使用的手感和我自己的 workflow 。

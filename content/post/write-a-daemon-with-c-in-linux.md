@@ -3,10 +3,10 @@ title: "在 Linux 上用 C 写一个守护进程"
 date: 2022-07-30T23:26:25+08:00
 draft: false
 categories:
-- C
+- Linux
 tags:
 - C
-- linux
+- Linux
 ---
 
 因为打算写点东西，所以就看了看如何实现一个守护进程。在 Linux 实现守护进程的步骤都是类似的，即使使用不同的语言，其骨架都是类似的。因为都要用到 `fork()` 方法。

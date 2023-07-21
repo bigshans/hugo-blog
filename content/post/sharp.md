@@ -3,11 +3,12 @@ title: 使用 Sharp 压缩图片、改变图片大小
 date: 2021-08-24T18:20:53+08:00
 draft: false
 tags:
-- sharp
-- nodejs
-- javascript
+- Sharp
+- Nodejs
+- Javascript
+- 服务端图片处理
 categories:
-- nodejs
+- 后端
 ---
 
 因为业务需要就写了个图片压缩服务，顺带改变大小，因为用的是 nodejs ，于是我就选择了 [sharp](https://github.com/lovell/sharp) ，基于 libvips。

@@ -2,10 +2,10 @@
 title: 玩玩 docker emacs
 date: 2019-11-10 20:35:36
 tags:
-- emacs
-- docker
+- Emacs
+- Docker
 categories:
-- emacs
+- Emacs
 ---
 
 最近倒腾公司电脑，结果装不上 emacs 26，我的很多配置无法启用，在这里我要批评一下 deepin 。我真的是很少有听过降系统升级的。 deepin 还在 Debian stretch 上，如今 Debian 都上 buster 了。 deepin 为了稳定系统搞这个我觉得真是不行，至少软件也要新的嘛！

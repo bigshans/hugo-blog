@@ -2,11 +2,11 @@
 title: 动态规划求解 RMQ 问题
 date: 2019-03-22 19:37:15
 tags:
-- algorithm
-- dp
-- rmq
+- Algorithm
+- DP
+- RMQ
 categories:
-- algorithm
+- Algorithm
 mathjax: true
 ---
 

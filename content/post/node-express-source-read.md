@@ -5,7 +5,7 @@ tags:
 - Express
 - Node
 categories:
-- Node
+- 后端
 ---
 
 我们写一个简单的程序。

@@ -2,9 +2,10 @@
 title: js 实现 DOM 监视
 date: 2018-10-07 15:53:19
 tags:
-- javascript
+- Javascript
+- 前端 
 categories:
-- javascript
+- 前端 
 ---
 
 花了点时间做了 b 站评论区地址链接化，比较麻烦的是 DOM 监视。找了很多，最后还是采用了 Muatation 来进行事件监视。

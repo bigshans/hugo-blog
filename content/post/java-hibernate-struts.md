@@ -2,11 +2,11 @@
 title: openjdk 11 配置 struts 2.5 + hibernate 5.3 环境
 date: 2018-12-02 13:12:22
 tags:
-- java
-- struts
-- hibernate
+- Java
+- Struts
+- Hibernate
 categories:
-- java
+- Java
 ---
 
 从昨天开始配置这个环境配到吐血，今天终于解决了，采用 idea 默认的配置无法使用，以前的项目可以用现在新建的不行了，我也不是很懂。 struts 一直报找不到 action ，我猜可能生成的目录变了，但改来改去着实难受，我也没耐心去猜，不如重新搞一个，所以本着折腾的精神搞出来了。

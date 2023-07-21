@@ -2,9 +2,9 @@
 title: python 备忘录（一）
 date: 2018-08-27 18:17:48
 tags:
-- python
+- Python
 categories:
-- python
+- Python
 ---
 这些篇主要是记录 python 的一些知识，有些可能很基础，不过我总是忘记，以此备忘。
 <!--more-->

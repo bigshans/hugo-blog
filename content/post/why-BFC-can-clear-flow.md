@@ -4,9 +4,10 @@ date: 2021-11-07T17:27:40+08:00
 lastmod: 2023-01-12T13:24:36Z
 draft: false
 tags:
-- css
+- CSS
+- 前端
 categories:
-- css
+- 前端
 ---
 
 有些学问还是自己研究最为靠谱，像是 `overflow` 为什么能清 `float` ，都知道是 BFC ，但是为什么呢？因为在文档流中，普通的 `div` 其实也是 `BFC` ，所以，理论上添加 `overflow` 为非 `visible` 的时候，它也仍然是 BFC 啊？所以，问题在哪里呢？

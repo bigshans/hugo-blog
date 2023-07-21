@@ -2,10 +2,10 @@
 title: python3 下使用 base64
 date: 2018-10-17 17:23:44
 tags:
-- python
-- base64
+- Python
+- Base64
 categories:
-- python
+- Python
 ---
 
 用自带库 base64 。

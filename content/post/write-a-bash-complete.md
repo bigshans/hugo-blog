@@ -3,10 +3,11 @@ title: 写一个 Bash 补全函数
 date: 2021-09-20T01:33:29+08:00
 draft: false
 tags:
-- bash
-- linux
+- Bash
+- Complete
+- Linux
 categories:
-- linux
+- Linux
 ---
 
 我的配置文件里面有我以前封装的、用于管理博客文章的命令，只不过之前是用 Hexo ，而现在迁移到了 Hugo 上，已经好久没有了，现在发现，拂拂灰尘用起来还是很带感的，但是没有自动补全总是欠缺点味道，于是我自己写了一个自动补全。

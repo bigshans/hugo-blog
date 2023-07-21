@@ -3,9 +3,9 @@ title: Flask 入门项目 Flaskr（一）
 date: 2018-12-06 20:31:55
 tags:
 - Flask
-- python
+- Python
 categories:
-- python
+- 后端
 ---
 
 昨天看了看 flask ，感觉很有意思，于是上官网看看文档，文档的 quickly started 很精简，讲述了基本用法。在 1.0.2 的文档下有一个小项目，很适合拿来练手。于是尝试跟着写了一下。

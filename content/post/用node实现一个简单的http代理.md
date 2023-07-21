@@ -5,9 +5,10 @@ lastmod: 2022-12-15T03:59:33Z
 markup: pandoc
 draft: false
 categories:
-- nodejs
+- 后端
 tags:
-- nodejs
+- Node
+- HTTP 代理实现
 ---
 
 http 代理可分为两种，一种是普通的代理，作为中间人传递两边的信息；另一种则是隧道的方式。

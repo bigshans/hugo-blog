@@ -3,11 +3,10 @@ title: Vue 3.2 <script setup> 摘要
 date: 2021-08-26T15:43:34+08:00
 draft: false
 tags:
-- javascript
-- vue
+- 前端
+- Vue
 categories:
-- javascript
-- vue
+- 前端
 ---
 
 在 Vue 3.2 发布的内容中，最主要内容就是 `<script setup>` 。 `<script setup>` 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。

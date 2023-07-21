@@ -2,10 +2,10 @@
 title: python 实现尾递归斐波那契数列
 date: 2018-08-28 16:30:17
 tags:
-- python
+- Python
 - lambda
 categories:
-- python
+- Python
 ---
 
 看了一下 [《 Python 简明教程》](https://pythoncaff.com/docs/byte-of-python/2018)，发现了一个很有意思的项目，它推荐了这个[项目](https://github.com/karan/Projects)来练手。这个项目是一份列表，关于用任何语言都可以实现的程序的项目。有兴趣可以实现一下。

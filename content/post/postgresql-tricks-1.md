@@ -4,7 +4,6 @@ date: 2021-06-08T09:04:01+08:00
 draft: false
 tags:
 - Postgresql
-- 数据库
 categories:
 - Postgresql
 ---

@@ -2,6 +2,10 @@
 title: infinality font 字体渲染安装
 date: 2019-11-03 10:23:43
 tags:
+- 字体
+- Linux
+categories:
+- Linux
 ---
 
 最近在工作电脑上安装了 deepin ，发现字体渲染很糟糕，于是在想起了 infinality 补丁，由于我个人电脑上是 manjaro ， arch 源里就有该包，所以我查找一下，发现 Debian 系的也有打包，成功安装之后，特此记录一下。

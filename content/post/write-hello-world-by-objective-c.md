@@ -3,7 +3,7 @@ title: 在 Linux 下使用 Objective-C 编程
 date: 2021-09-12T20:33:41+08:00
 draft: false
 tags:
-- linux
+- Linux
 - Objective-C
 categories:
 - Objective-C

@@ -2,9 +2,9 @@
 title: happy hacking emacs
 date: 2019-10-31 19:16:23
 tags:
-- emacs
+- Emacs
 categories:
-- emacs
+- Emacs
 ---
 
 最近在折腾 emacs ，不得不说这个曲线真的是非常陡峭啊！但有些有趣的东西的确让人欲罢不能。今天就在这里跟大家分享一下折腾过程中出现的问题，希望能能给大家带来一点帮助。

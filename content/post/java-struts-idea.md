@@ -2,11 +2,11 @@
 title: 在 idea 中布置 struts 2.5
 date: 2018-09-06
 tags:
-- java
-- idea
-- struts 2
+- Java
+- Idea
+- Struts 2
 categories:
-- java
+- Java
 ---
 不得不说百度跟谷歌比还差的远啊。我从官网上下载 struts 的最小包，布置到 idea 上不能正常使用，百度不行上谷歌，终于解决了。
 <!--more-->

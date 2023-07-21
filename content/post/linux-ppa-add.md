@@ -2,11 +2,11 @@
 title: 在 Debian 下使用 PPA
 date: 2019-06-26 11:24:44
 tags:
-- linux
-- ppa
-- debian
+- Linux
+- PPA
+- Debian
 categories:
-- linux
+- Linux
 ---
 
 仅仅使用 Debian 源里的软件包并不是很够，所以不可避免的，我们会使用一些第三方的软件源，比如 Arch 下的 aur ， Ubuntu 的 PPA ，等等。由于 Ubuntu 是 Debian 系的发行版，两者的包管理是相通的，所以我们可以借用一下 Ubuntu 的 PPA 来扩充我们的软件库。然而，两者毕竟不是同一发行版，所以还是会有很多的差别，我们并不能保证两者的软件包一定能通用，毕竟打包并不是针对 Debian 的，不过， Ubuntu 能用的， Debian 基本能用，所以，把 Ubuntu 的 ppa 拉过来还是很有意义的。

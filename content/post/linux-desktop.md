@@ -2,12 +2,12 @@
 title: linux 桌面简单体验（一） ———— 关于 linux desktop 使用的总结
 date: 2018-08-26 17:34:37
 tags:
-- linux desktop
-- gnome
+- Linux Desktop
+- Gnome
 - KDE
 - DDE
 categories:
-- linux
+- Linux
 ---
 一直想写一个个人关于 linux desktop 的文章，算是个人在 linux 桌面上体验的总结。主要是 gnome 3 、 DDE 、KDE 、 i3wm 、 xfce4 、 cinnamon 等。陆续会写一下我在这些桌面上体验的一些总结，希望内给予你们一些帮助。
 

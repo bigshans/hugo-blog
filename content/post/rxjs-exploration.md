@@ -3,10 +3,10 @@ title: RxJs 初探 —— 基于事件为中心的编程
 date: 2021-10-02T22:19:12+08:00
 draft: false
 tags:
-- rxjs
-- javascript
+- Rxjs
+- Javascript
 categories:
-- javascript
+- Javascript
 ---
 
 这是我学习 RxJs 的一些整理 ，其实 RxJs 是个 FRP 库，理解它应该从 FRP 来落脚，但一开始就讲函数式就太难了，而且放在初学者面前未免喧宾夺主了，所以我从事件开始讲，把函数式放到一边，然而这个其实也是 FRP 的重点——事件建模。

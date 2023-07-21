@@ -2,10 +2,10 @@
 title: 写一个 vim 窗口跳转
 date: 2019-01-17 21:37:36
 tags:
-- vim
-- vimscript
+- Vim
+- VimScript
 categories:
-- vim
+- Vim
 ---
 
 spacemacs 的 which-key 可以实现 <leader> <number> 选择对应窗口，这个功能在 spacevim 上面都有，我挺喜欢的，不过不知道怎么实现的。之前我安装了 space-vim 项目的 vim-which-key 插件，根据 vim-leader-guide 改的，跟 which-key 很像，可以拿来用了。于是我这几天将我原来的 vim 配置做了一个大幅度的调整，并把这个功能给实现了。

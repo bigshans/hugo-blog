@@ -2,9 +2,10 @@
 title: 解决 mysql 进程无法启动的问题
 date: 2020-01-18 18:05:52
 tags:
-- mysql
+- MySQL
+- 后端
 categories:
-- mysql
+- 后端
 ---
 
 最近想写一点小东西，就发现自己电脑上的 mysql 出了点问题，解决之后做个小记录。

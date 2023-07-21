@@ -3,10 +3,10 @@ title: 修复 Broken 了的 locale
 date: 2021-04-26T18:07:20+08:00
 draft: false
 tags:
-- linux
-- locale
+- Linux
+- Locale
 categoties:
-- linux
+- Linux
 ---
 
 昨天做了一件非常错误的事情，就是使用 Bleachbit 清理了一下系统。 Bleachbit 直接把我的 locale 给直接删掉了，然而当时我并没有关注到这一点，关上电脑就睡觉了，然后第二天，中文就炸了。

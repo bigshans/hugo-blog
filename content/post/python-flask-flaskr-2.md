@@ -2,10 +2,10 @@
 title: Flask 入门项目 Flaskr（二）
 date: 2018-12-07 20:47:45
 tags:
-- python
+- Python
 - Flask
 categories:
-- python
+- 后端 
 ---
 
 今天身体不太舒服，感冒了。不过还是照着官网大概打了一下。这个项目的主体是完成了，改天写写测试。

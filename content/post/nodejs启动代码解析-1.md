@@ -3,9 +3,9 @@ title: NodeJs 启动代码解析（一）
 date: 2022-05-06T10:04:22+08:00
 draft: false
 categories:
-- nodejs
+- Node
 tags:
-- nodejs
+- Node
 ---
 
 NodeJs 的 main 函数在 node_main.cc 文件中， NodeJs 区分了 `WIN32` 、 `UNIX` 、 `LINUX` 。我们主要分析 Linux 部分。

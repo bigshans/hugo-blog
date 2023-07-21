@@ -5,9 +5,9 @@ lastmod: 2023-03-16T02:58:06Z
 markup: pandoc
 draft: false
 categories:
-- node
+- Node
 tags:
-- node
+- Node
 ---
 
 JavaScript 是一门和事件循环结合非常紧密的语言，它最早出现在浏览器上，因为 JavaScript 为了保持 DOM 与操作相分离，同时协调浏览器上的各种资源，因而不得不有一个总线去处理，这个总线就是事件循环。 ES 标准并没有规定事件循环应该如何编写，因为这很明显取决于运行时，所以各个 Runtime 之间的事件循环存在较大的差别，比如说，之前浏览器和 Node 的事件循环机制就存在较大的差别。最新版的 Node 在事件循环上的表现，基本与浏览器类似了。

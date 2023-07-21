@@ -5,9 +5,10 @@ modtime: 2023-02-27T15:16:43Z
 markup: pandoc
 draft: false
 categories:
-- linux
+- Linux
 tags:
-- linux
+- Linux
+- 重装 Arch
 ---
 
 昨天 KDE 不知道什么原因滚挂了，于是我决定重装系统。最近 KDE 在我的机子上经常崩溃，我也不想修了，因为真的修不起来。距离上一次重装不知道什么时候了，但 Arch 的稳定程度其实是可以的，只要你不是故意去 Arch Testing 。

@@ -4,8 +4,9 @@ date: 2021-05-24T22:19:11+08:00
 draft: false
 tags:
 - art-html
+- 前端
 categories:
-- node
+- 前端
 ---
 
 最近写的一个小项目，感觉很有意思就与大家分享一下，当然我给的这个是 Demo 。项目地址是 https://github.com/bigshans/art-html 。

@@ -3,10 +3,11 @@ title: "可能 lua 不是配置 nvim 的最佳解决方案"
 date: 2022-04-04T21:55:06+08:00
 draft: false
 tags:
-- lua
-- nvim
+- Lua
+- Vim
+- NVim
 categories:
-- nvim
+- NVim
 ---
 
 这几天折腾 nvim ，折腾的过程中也发现各个插件可能并不一定如我意，于是我就修改一部分插件并 fork 为己所用。不知不觉过去好久了，我积累下来的好多配置，以及好多插件都需要更换了，一些是无人维护了，一些是不兼容了。除此之外，还有另外一件事情，要不要用 lua 替换我原来 vimScript 的配置？

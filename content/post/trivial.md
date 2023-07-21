@@ -2,6 +2,13 @@
 title: "琐碎备录"
 date: 2022-08-05T16:46:36+08:00
 draft: false
+tags:
+- Git
+- Make
+- Pacman
+categories:
+- Software
+- Linux
 ---
 
 ## Makefile

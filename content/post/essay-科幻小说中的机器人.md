@@ -3,7 +3,6 @@ title: 关于科幻小说中的机器人，或者是人工智能的讨论
 date: 2021-04-11T01:24:07+08:00
 draft: false
 tags:
-  - 随笔
   - 科幻小说
   - 机器人
 categories:

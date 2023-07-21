@@ -4,9 +4,9 @@ date: 2023-02-16T00:34:50+08:00
 markup: pandoc
 draft: false
 categories:
-- 开发杂谈
+- 编程随笔
 tags:
-- 开发杂谈
+- 编程随笔
 ---
 
 看完 core-js 作者的长文后，有感而发，写一点文字。

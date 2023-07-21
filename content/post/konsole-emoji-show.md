@@ -3,9 +3,10 @@ title: "解决在 Konsole 下的 Emoji 展示问题"
 date: 2022-09-09T14:54:41+08:00
 draft: false
 categories:
-- HACK
+- 解决方案
 tags:
-- HACK
+- Linux
+- Konsole
 ---
 
 解决方法很简单，就是配置 fontconfig 。同时，该方案也解决了在其他一些软件内 emoji 显示异常的问题，比如说 qv2ray 。

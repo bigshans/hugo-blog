@@ -3,7 +3,7 @@ title: 论具体的人与抽象的人
 date: 2021-10-01T17:49:11+08:00
 draft: false
 tags:
-  - 随笔
+  - 思辨
 categories:
   - 思辨
 ---

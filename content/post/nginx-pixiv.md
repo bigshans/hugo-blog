@@ -2,11 +2,11 @@
 title: nginx 反向代理上 Pixiv
 date: 2018-09-24 15:40:34
 tags:
-- nginx
-- hosts
-- linux
+- Nginx
+- Hosts
+- Linux
 categories:
-- nginx
+- 后端
 ---
 
 Pixiv 被墙了，上不了。我上了 Pixiv 的贴吧，刚好发现有人发帖说如何再上 P 站（ https://tieba.baidu.com/p/5882385726 ） 。使用 nginx 做反向代理，看着比较简单，于是自己试了试，由于 nginx 自己不太熟，所以是尽量完成。

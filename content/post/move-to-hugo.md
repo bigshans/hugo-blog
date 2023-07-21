@@ -3,9 +3,11 @@ title: "迁移到 Hugo 上"
 date: 2020-11-14T21:38:31+08:00
 draft: false
 tags:
-- hugo
+- Hugo
+- Even
+- Hexo
 categories:
-- 随笔
+- 编程随笔
 ---
 
 好久没有写博客了。

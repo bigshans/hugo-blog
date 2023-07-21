@@ -2,10 +2,10 @@
 title: nginx 反向代理上 Pixiv（二）
 date: 2018-10-12 19:02:22
 tags:
-- nginx
-- linux
+- Nginx
+- Linux
 categories:
-- nginx
+- 后端
 ---
 这篇文章我发在 B 站了，地址是 https://www.bilibili.com/read/cv1317348 。当然，这里我要讲细一点。
 

@@ -4,10 +4,10 @@ date: 2018-12-26 15:46:18
 copyright: true
 markup: pandoc
 tags:
-- latex
-- emacs
+- Latex
+- Emacs
 categories:
-- latex
+- Latex
 ---
 
 我个人很喜欢在 emacs 里用 latex 写公式，而且可以从中到处对应的 pdf ，很方便。在这里我记录一下常用的代码。

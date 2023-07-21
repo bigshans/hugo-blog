@@ -3,9 +3,9 @@ title: Sku 算法浅讲
 date: 2021-09-27T17:41:12+08:00
 draft: false
 tags:
-- algorithm
+- Algorithm
 categories:
-- algorithm
+- Algorithm
 ---
 
 一个重复写过几次的老算法了，今天总结一下大体思路。这是一个在电商领域非常常见的算法，就是选择商品 Sku 时的算法。

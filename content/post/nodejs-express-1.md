@@ -2,10 +2,10 @@
 title: Express 学习(一)
 date: 2019-06-27 13:48:27
 tags:
-- nodejs
-- express
+- Node
+- Express
 categories:
-- nodejs
+- 后端
 ---
 
 公司后端采用了 nodejs + express 环境，最近在看，现在记录一点笔记。

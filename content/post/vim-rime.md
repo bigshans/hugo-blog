@@ -2,12 +2,12 @@
 title: 在 vim 下修改自然码码表
 date: 2019-01-31 11:27:53
 tags:
-  - rime
-  - vim
-  - fcitx
+  - Rime
+  - Vim
+  - Fcitx
   - 正则表达式
 categories:
-  - vim
+  - Rime
 ---
 
 最近想要用 fcitx 来替代搜狗输入法，因为搜狗输入法占用真的太大了，所以我决定尝试替换。我首先尝试了给 fcitx-pinyin 添加词库，不过效果不是特别好，单字表不能再添加一些字，所以我决定换用别的输入法。 fcitx-sunpinyin 可以添加用户词典，但添加新的单词的时候会严重卡顿，而且打某些字的时候也会卡顿，体验极其糟糕，所以我决定尝试一下 fcitx-rime 。

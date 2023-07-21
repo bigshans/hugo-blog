@@ -3,12 +3,12 @@ title: 使用 Whoogle 自建搜索网站
 date: 2021-05-30T03:40:00+08:00
 draft: false
 tags:
-- whoogle
-- searx
-- google
+- Whoogle
+- Searx
+- Google
 - 搜索
 categories:
-- whoogle
+- 后端
 ---
 
 准确来说，Whoogle 是一个元搜索引擎，他主要将 Google 的搜索结果过滤，并去除掉其中的隐私追踪部分。与 Whoogle 差不多的另一个网站框架是 SearX ，两者都是自建的元搜索引擎，二者代码都开源到了 Github 上。

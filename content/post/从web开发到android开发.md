@@ -4,9 +4,9 @@ date: 2022-12-04T16:59:11+08:00
 markup: pandoc
 draft: true
 categories:
-- Android
+- Android 开发
 tags:
-- Android
+- Android 开发
 ---
 
 ## 从 `AndroidManifest.xml` 开始

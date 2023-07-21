@@ -3,10 +3,13 @@ title: 为什么使用 zsh 以及为什么这样使用
 date: 2021-09-22T01:08:35+08:00
 draft: false
 tags:
-- linux
-- shell
+- Linux
+- Zsh
+- Bash
+- Fish
+- Oh My Zsh
 categories:
-- linux
+- Linux
 ---
 
 我使用 zsh 作为我的默认 shell 已经很长时间了，大概是从我使用 Debian 就开始了。当初的原因其实很简单，因为强大的 Oh My Zsh ，如今我用了这么久，想要重新疏理一下，向你推荐这样使用 zsh 。

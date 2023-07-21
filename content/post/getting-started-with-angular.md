@@ -6,7 +6,7 @@ tags:
 - 前端
 - Angular
 categories:
-- Angular
+- 前端
 ---
 
 因为最近重新用了用 Angular ，在有了 Vue 和 React 的使用经验之后，对 Angular 又有了新的理解。 Angular 是真正意义上与 Vue 和 React 区分的框架，因为其思想与二者截然不同。不过我不讨论这个，我是来讲 Angular 入门。

@@ -4,9 +4,9 @@ date: 2023-02-15T18:27:32+08:00
 markup: pandoc
 draft: false
 categories:
-- 开发杂谈
+- 编程随笔
 tags:
-- 开发杂谈
+- 编程随笔
 ---
 
 最近 RPA 用得比较多，我谈一下这个。

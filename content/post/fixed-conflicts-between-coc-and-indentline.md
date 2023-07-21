@@ -3,9 +3,9 @@ title: '修复 coc.nvim 和 indentLines 的冲突'
 date: 2022-02-23T16:47:18+08:00
 draft: false
 tags:
-  - vim
+  - Vim
 categories:
-  - vim
+  - Software
 ---
 
 我用的是 indentLines 是 [Yggdrot/indentLine](https://github.com/Yggdroot/indentLine) ，与 [coc.nvim](https://github.com/Yggdroot/neoclide/coc.nvim) 存在冲突，主要是诊断的高亮覆盖了 indentLine 的高亮导致 indentLine 无法显示。当然，并不是所有的 buffer 里都会这样，但是需要诊断的 FileType 都是这样。

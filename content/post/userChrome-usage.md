@@ -2,10 +2,11 @@
 title: "userChrome.js 的使用"
 date: 2022-08-14T17:56:49+08:00
 draft: false
-categories:
-- HACK
 tags:
-- HACK
+- Firefox
+- userChrome
+categories:
+- Software
 ---
 
 userChrome.js 是 Firefox 的一种玩法，可以高度自定义 Firefox 的界面、样式、功能。虽然 XUL 很早就死掉了，但所幸 userChrome.js 仍然是可用的。需要注意的是， userChrome.js 是非正式且冷门的自定义玩法，常常随着 Firefox 的升级而失效，所以，你需要随时 Break 的准备。

@@ -3,9 +3,10 @@ title: 'sort 在 Chrome 和 Firefox 表现不同'
 date: 2022-03-31T10:18:10+08:00
 draft: false
 tags:
-  - javascript
+  - Javascript 
+  - 前端
 categories:
-  - javascript
+  - 前端
 ---
 
 首先，这个区别不算 BUG ，因为标准并没有规定该怎么排，但这个细微区别在实现一些特殊需求时需要被注意到。

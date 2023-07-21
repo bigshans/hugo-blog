@@ -3,9 +3,9 @@ title: 为什么使用或为什么不用 TypeScript
 date: 2021-11-29T15:38:55+08:00
 draft: false
 tags:
-  - 开发杂谈
+  - TypeScript
 categories:
-  - 开发杂谈
+  - TypeScript
 ---
 
 最近在写 Angular ，众所周知，现在要写 Angular 基本上是除了 TypeScript 就没得跑了。不得不说， Angular 真是前端规范化的练兵场，前端三大框架中，唯 Angular 严格控制了编写的方式，从环境搭建到部署发布， Angular 很省心地处理了其中的大部分问题，使得你可以专心业务，在这一点上，学习 Angular 的 NestJS 还是差很多的。

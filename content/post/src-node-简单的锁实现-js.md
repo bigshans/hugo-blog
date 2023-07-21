@@ -2,10 +2,9 @@
 title: 分布式锁的简单实现
 date: 2019-10-20 10:11:38
 tags:
-- node
-- javascript
+- Node
 categories:
-- javascript
+- 后端
 ---
 
    打算每周写一篇博客，希望每周都能有新的收获。本周写的博客是我在工作中应用写的一个有趣的东西。

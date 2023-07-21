@@ -5,7 +5,7 @@ draft: false
 tags:
   - 随笔
 categories:
-  - 政论
+  - 随笔
 ---
 
 最近老是看到天涯的那个讨论房价的 [帖子](https://github.com/shenzhengfang/kkndme_tianya) ，神叨很多，个人感觉充满了精英主义、犬儒主义以及阴谋论的“洞见”，但说的并非不对，只是味道非常不正，简直右得厉害。

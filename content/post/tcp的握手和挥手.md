@@ -6,7 +6,9 @@ draft: false
 categories:
 - 网络
 tags:
+- Node
 - 网络
+- TCP
 ---
 
 TCP 的握手和挥手想必很多人都已经很熟悉了，“三次握手”和“四次挥手”在面试的时候几乎都是八股文了。光是背这个的话，着实了无趣味。我们可以通过 `tcpdump` 和 wireshark 来看整个过程。

@@ -2,10 +2,10 @@
 title: 使用 OpenSSL 自建 CA
 date: 2018-10-13 12:32:10
 tags:
-- nginx
-- openssl
+- Nginx
+- Openssl
 categories:
-- openssl
+- 后端
 ---
 
 谷歌上找了半天终于找到了，https://www.cnblogs.com/luo630/p/9534734.html 。

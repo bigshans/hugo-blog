@@ -3,11 +3,10 @@ title: 安装 Collabora Office
 date: 2021-10-14T09:47:19+08:00
 draft: false
 categories:
-- collabora
-- nextcloud
-- linux
+- Software
 tags:
-- linux
+- Nextcloud
+- Collabora Office
 ---
 
 最近在配置 Nextcloud 的 Office 功能，尝试了一下 OnlyOffice ，实在是太不稳定了。我最终选择了 Collabora Office 作为替代。

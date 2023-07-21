@@ -3,10 +3,10 @@ title: 在 Docker 内编译 React Native
 date: 2021-02-21T18:57:43+08:00
 draft: false
 tag:
-- docker
-- react native
+- Docker
+- React Native
 categories:
-- docker
+- React Native
 ---
 
 每次 Android Studio 升级，打开后总会带着 Android SDK 升级，还有我的 Gradle 、 Java ，然后就不能正常编译了，很烦。于是我决定搞一个 Docker 来让编译环境保持一致。

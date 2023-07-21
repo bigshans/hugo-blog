@@ -5,9 +5,9 @@ draft: false
 tags:
 - 认知复杂度
 - 代码质量
-- sonar
+- Sonar
 categories:
-- 代码质量
+- 编程随笔
 ---
 
 Cognitive Complexity ，即认知复杂度，是来自于 Sonar 官方的一个概念。认知复杂度主要是以可测量的方式，将代码估算成一个数字，用以衡量代码的理解难度的。它基于一下三条准则：

@@ -3,11 +3,11 @@ title: "如何使用 Webhook 来实现自动部署项目"
 date: 2020-11-15T18:30:45+08:00
 draft: false
 tags:
- - webhooks
- - nginx
- - php
+ - Webhooks
+ - Nginx
+ - PHP
 categories:
- - 自动部署
+ - 后端
 ---
 
 自动部署是个很香的想法，你只需要把代码一推，然后系统就可以自动的帮你完成繁琐的部署流程，前提你的部署流程足够的程式化。

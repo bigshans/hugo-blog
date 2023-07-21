@@ -3,10 +3,10 @@ title: 为什么选择 Linux 桌面
 date: 2021-04-11T18:18:57+08:00
 draft: false
 tags:
-- linux 桌面
-- 随笔
+- Linux Desktop
+- Linux
 categories:
-- 随笔
+- Linux
 ---
 
 今天算是创作欲爆棚了，想到了一点东西就又写一点。今天来探讨一下这个话题，为什么选择 Linux 桌面。

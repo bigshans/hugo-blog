@@ -2,11 +2,10 @@
 title: 网易云音乐 for linux 不用 root 打开
 date: 2018-08-29 16:42:55
 tags:
-- linux
-- NeteaseCloudMusic
-- shell
+- Linux
+- NeteaseCloud Music
 categories:
-- software
+- 解决方案
 ---
 从知乎上看到这个，非常感谢 Fancy 的努力。
 

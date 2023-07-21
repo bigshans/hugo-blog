@@ -2,9 +2,9 @@
 title: elasticsearch 频繁更新问题
 date: 2020-04-07 10:24:48
 tags:
-- elasticsearch
+- Elasticsearch
 categories:
-- elasticsearch
+- Elasticsearch
 ---
 
 我一开始并没有发现这个问题，到后面 Debug 的时候猜想并与社区的小伙伴得到验证。

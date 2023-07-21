@@ -3,9 +3,9 @@ title: '搞定了几个 Gitea 相关的问题'
 date: 2022-03-19T00:52:32+08:00
 draft: false
 tags:
-  - gitea
+  - Gitea
 categories:
-  - linux
+  - Software
 ---
 
 Gitea 可以同步 Github 仓库之后，让我觉得仓库管理有很大的便利。因为我的很多代码毕竟保存在 Github 上，允许同步 Github 免去了我很多两头跑的工作。

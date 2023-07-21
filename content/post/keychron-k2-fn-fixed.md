@@ -3,9 +3,9 @@ title: '修复 Keychron K2 的 Fn 键在 Arch 上不好使的问题'
 date: 2022-03-06T14:24:56+08:00
 draft: false
 tags:
-  - linux
+  - Linux
 categories:
-  - linux
+  - Linux
 ---
 
 话说 Keychron 这个软件系统兼容做的真差，没想到基础的 Fn 键也能出岔子。

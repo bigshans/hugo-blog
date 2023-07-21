@@ -3,12 +3,12 @@ title: coc-kite-cmp 发布
 date: 2022-01-23T19:10:42+08:00
 draft: false
 tags:
-  - vim
+  - Vim
   - coc.nvim
-  - kite
-  - typescript
+  - Kite
+  - Typescript
 categories:
-  - vim
+  - Vim
 ---
 
 最近在尝试 AI complete ，主要是 TabNine 和 Kite ，两者可以基于本地代码作出较好的智能推测。在 VSCode 上，两者都有对应的插件，但在 Vim 上时，情况就不同了。我使用的是 coc.nvim ，作为我的补全框架， TabNine 有 coc-tabnine ，但 Kite 的 coc-kite 与 VSCode 上的不一致。于是我决定手动解决这个问题。

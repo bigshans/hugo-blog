@@ -2,10 +2,10 @@
 title: org-mode 个人常用快捷键
 date: 2018-12-26 14:46:48
 tags:
-- emacs
-- org-mode
+- Emacs
+- Org-mode
 categories:
-- emacs
+- Emacs
 ---
 
 最近在用 emacs 的 org-mode 来做一些笔记和 agenda ，个人觉得挺好用的。不认默认的 emacs 快捷键用 ctrl ，用了四天结果我小拇指贼疼，虽然将 ctrl 与 caps 进行交换了，但最后将 ralt 与 rctrl 进行交换，现在稍微好一点。不过我用的是 spacemacs ，用 spacemacs 的快捷键还是很好用的，也能保护好小拇指。

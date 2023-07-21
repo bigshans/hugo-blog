@@ -2,11 +2,10 @@
 title: deb 打包指北
 date: 2018-09-09 19:18:52
 tags:
-- debian
-- linux
-- software
+- Debian
+- Linux
 categories:
-- linux
+- Linux
 ---
 
 最近几天在给我的一些软件打包，原本打算建立一个私人仓库，不过没有云还是算了。本地打包的话貌似空间不太够，不过首先还是要学习一下 debian 的相关知识的。

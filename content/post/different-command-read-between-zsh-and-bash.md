@@ -3,9 +3,10 @@ title: read 在 zsh 和 bash 下的不同
 date: 2021-10-22T14:13:51+08:00
 draft: false
 tags:
-- shell
+- Bash
+- Zsh
 categories:
-- linux
+- Linux
 ---
 
 不实际进行使用我还注意不到这个区别，就是 `read` 这个命令在 zsh 和 bash 下是不同的。

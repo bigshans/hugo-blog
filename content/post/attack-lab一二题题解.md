@@ -4,7 +4,7 @@ date: 2023-03-12T22:15:45+08:00
 markup: pandoc
 draft: false
 categories:
-- 学习笔记
+- 编程随笔
 tags:
 - 深入理解计算机系统
 - 堆栈溢出

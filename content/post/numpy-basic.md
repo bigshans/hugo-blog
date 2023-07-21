@@ -3,13 +3,11 @@ title: numpy 基础
 date: 2021-10-22T16:12:26+08:00
 draft: false
 tags:
-- python
-- numpy
+- Python
+- Numpy
 - 机器学习
-- 大数据
 categories:
 - 机器学习
-- 大数据
 ---
 
 numpy 几乎可以说是 python 矩阵计算的基础库了，众多大数据处理框架都引用了它。因此，如果我们有意向大数据前进，我们必不可不面对它。

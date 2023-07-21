@@ -3,9 +3,9 @@ title: "自顶向下的 ACID"
 date: 2022-08-31T15:21:43+08:00
 draft: false
 categories:
-- 开发杂谈
+- 编程随笔
 tags:
-- 开发杂谈
+- 编程随笔
 ---
 
 ACID ，即原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）和持久性（Durability），只要你接触数据库总是逃不掉的。现在，我问你一个问题，如果现在数据库不提供 ACID 保证，你如何在应用程序层面实现 ACID 呢？

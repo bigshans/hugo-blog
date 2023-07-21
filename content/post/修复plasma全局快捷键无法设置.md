@@ -4,9 +4,9 @@ date: 2023-02-04T20:22:00+08:00
 markup: pandoc
 draft: false
 categories:
-- linux
+- Linux
 tags:
-- linux
+- Linux
 ---
 
 起因是不知道什么时候，我打开 Plasma 的快捷键设置时，全局设置总是报错，但虽然报错，全局快捷键亦然很好使。

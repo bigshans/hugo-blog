@@ -3,9 +3,9 @@ title: Github Action 使用速记
 date: 2021-11-23T18:07:24+08:00
 draft: false
 categories:
-- CI
+- 编程随笔
 tags:
-- github
+- Github
 - CI
 ---
 

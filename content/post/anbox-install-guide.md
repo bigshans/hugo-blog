@@ -3,10 +3,10 @@ title: 安装 Anbox for Arch
 date: 2021-07-24T10:47:29+08:00
 draft: false
 tags:
-- linux
-- anbox
+- Linux
+- Anbox
 categories:
-- linux
+- Linux
 ---
 
 台风天写这篇文章。

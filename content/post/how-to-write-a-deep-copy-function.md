@@ -3,10 +3,10 @@ title: 如何写一个深拷贝函数
 date: 2021-08-22T14:52:42+08:00
 draft: false
 tags:
-- 深拷贝
-- javascript
+- Deep Clone
+- Javascript
 categories:
-- javascript
+- Javascript
 ---
 
 跟小伙伴们讨论的时候发现，es6 的解构其实和 `Object.assign` 一样属于是浅拷贝。那么一个深拷贝到底该怎么写呢？我个人阅读了一下 lodash 、 rambda 、 rfdc 的实现，发现思想其实都是一样，由于 rfdc 放弃了对一些内容的支持，使得它的速度飞快，但这些内容实际上我是需要的，所以 rfdc 不考虑。剩下两个实现思想基本上是一样的，但是 lodash 的实现内容很多，没有 rambda 简洁，所以我以 rambda 为蓝本自己写了一个深拷贝函数。

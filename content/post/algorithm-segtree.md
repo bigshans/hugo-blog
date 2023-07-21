@@ -2,9 +2,10 @@
 title: 线段树算法
 date: 2019-03-08 20:50:55
 tags:
-- algorithm
+- Algorithm
+- 线段树
 categories:
-- algorithm
+- Algorithm
 mathjax: true
 ---
 

@@ -3,8 +3,10 @@ title: 纯 numpy 实现 KNN
 date: 2021-11-08T15:16:47+08:00
 draft: false
 tags:
+- python
 - numpy
 - 机器学习
+- kNN
 categories:
 - 机器学习
 ---

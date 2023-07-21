@@ -3,9 +3,9 @@ title: Pleroma 安装排雷
 date: 2021-05-21T22:04:17+08:00
 draft: false
 tags:
-- pleroma
+- Pleroma
 categories:
-- pleroma
+- Software
 ---
 
 安装 Pleroma 倒也不是什么特别难的事，只要照着[文档](https://docs-develop.pleroma.social/backend/)自己安装即可，但是，事情往往并没有你想的那么简单。

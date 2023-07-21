@@ -2,10 +2,10 @@
 title: 安装 deepin-wine 到 debian 上
 date: 2018-09-02 19:21:21
 tags:
-- linux
-- software
+- Linux
+- QQ
 categories:
-- software
+- Linux
 ---
 
 我尝试了一下 [deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu) 项目，不过无法正常装上。所以我自己尝试了一下安装 deepin-wine 并尝试了一下 deepin 的 QQ 和 TIM 。效果还不错。

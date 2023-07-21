@@ -2,9 +2,9 @@
 title: elasticsearch 的简单使用
 date: 2020-03-30 15:54:50
 tags:
-- elasticsearch
+- Elasticsearch
 categories:
-- elasticsearch
+- Elasticsearch
 ---
 
 最近由于业务的增长，所以决定使用 elasticsearch 。

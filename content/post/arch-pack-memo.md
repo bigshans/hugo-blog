@@ -3,10 +3,10 @@ title: Arch 打包备忘录
 date: 2021-10-30T01:08:44+08:00
 draft: false
 tags:
-  - linux
+  - Linux
   - 打包
 categories:
-  - linux
+  - Linux
 ---
 
 最近又写了一个 PKGBUILD 传到了 AUR 。不过距离上一次打包已经过去很久了，这些包其实许久没有更新了，就到我自己都忘了要怎么打包了。因为一些常用命令经常记不住，所以就简单写一篇记录一下。

@@ -4,9 +4,10 @@ date: 2022-11-13T23:16:38+08:00
 markup: pandoc
 draft: false
 categories:
-- HACK
+- 解决方案
 tags:
-- HACK
+- Krunner
+- 字体
 ---
 
 最近 Plasma 不是很稳，于是我切换到了 Xfce 下避难。由于前我一直用的是 Plasma ，很多软件我还是习惯用 KDE ，所以 Krunner 我用的非常习惯。

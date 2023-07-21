@@ -3,9 +3,9 @@ title: "使用 Firefox PWA"
 date: 2022-09-04T19:32:36+08:00
 draft: false
 categories:
-- software
+- Software
 tags:
-- software
+- Firefox PWA
 ---
 
 Firefox 很久之前就停止支持 PWA 了，但现在 SPA 蓬勃发展，很多所谓的应用不过是网页套壳罢了， PWA 能够更简单的将网页安装为应用，比起要在系统里塞数个 Electron ，我觉得好很多。

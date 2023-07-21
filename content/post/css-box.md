@@ -4,9 +4,10 @@ date: 2023-01-13T09:27:13+08:00
 markup: pandoc
 draft: false
 categories:
-- css
+- 前端
 tags:
-- css
+- CSS
+- 前端
 ---
 
 一个 HTML 文档在浏览器内将会被解析为一棵文档树，这是众所周知的。 CSS 的盒子模型则描述了文档上的每一个节点所生成的模型，这是 CSS 布局排版的基础。

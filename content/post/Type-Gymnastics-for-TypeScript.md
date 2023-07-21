@@ -3,10 +3,10 @@ title: TypeScript 类型体操之斐波那契
 date: 2021-12-17T15:26:50+08:00
 draft: false
 tags:
-- typescript
+- Typescript
 - 元编程
 categories:
-- typescript
+- Typescript
 ---
 
 类型体操如果不是写库的话，基本上是屠龙技。 TypeScript 的类型系统本质上是一个小函数式语言，通过类型体操能够更清晰的感受到这一点。不过 TypeScript 类型系统有限制，并不能跟真正的函数式相媲美。但我们仍然可以写一个斐波那契数列小试牛刀。

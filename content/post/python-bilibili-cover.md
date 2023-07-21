@@ -2,10 +2,10 @@
 title: python 爬虫获取 bilibili 封面
 date: 2018-08-29 17:01:17
 tags:
-- python
+- Python
 - 爬虫
 categories:
-- python
+- 爬虫
 ---
 
 以前写的一个脚本，获取 B 站视频封面的脚本，使用了 urllib 来爬虫，用 feh 来打开图片。

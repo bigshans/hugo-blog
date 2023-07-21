@@ -3,10 +3,10 @@ title: Minikube 简介
 date: 2021-09-22T15:47:06+08:00
 draft: false
 tags:
-- minikube
+- Minikube
 - 运维
 categories:
-- linux
+- 后端
 ---
 
 k8s 是个非常著名的容器编排框架，凡稍有涉足运维后端者，未尝有不曾听闻。但是， k8s 本身非常庞大，安装复杂，对于学习和测试 k8s 来说，空耗于安装之上，未免失于实务，逐于稍末了，故 k8s 团队开发了 minikube 以方便用户学习和开发。

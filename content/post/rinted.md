@@ -2,10 +2,11 @@
 title: rinted 做端口转发
 date: 2020-02-15 12:49:19
 tags:
-- linux
-- rinted
+- Linux
+- Rinted
+- 内网转发
 categories:
-- linux
+- Linux
 ---
 
 因为腾讯云的 Mongo 和 Redis 都是内网的地址，不能访问，官方说内网进行内网转发就行，于是就用 rinted 做了一个内网转发。

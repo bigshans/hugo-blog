@@ -3,9 +3,9 @@ title: 'sed 速记'
 date: 2022-02-16T17:11:39+08:00
 draft: false
 tags:
-  - linux
+  - sed 
 categories:
-  - linux
+  - Linux
 ---
 
 `sed` 命令是一个强大的、基于行的文本处理命令，它仍被广泛使用。 `sed` 借助正则表达式对文本的某行进行增删改查。

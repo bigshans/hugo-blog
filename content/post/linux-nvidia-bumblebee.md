@@ -2,11 +2,11 @@
 title: 在 linux 下搞定 nvidia 双显卡
 date: 2018-09-08 09:22:39
 tags:
-- bumbeeble
-- linux
-- nvidia
+- Bumbeeble
+- Linux
+- Nvidia
 categories:
-- linux
+- Linux
 ---
 
 终于终于把双显卡整好了，该死的 NVIDIA 。为了双显卡我的桌面崩溃了几次，不过终于整好了。下面讲讲我处理这些的一些过程。

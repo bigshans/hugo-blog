@@ -3,10 +3,11 @@ title: 如何编写一个 Chrome 扩展
 date: 2021-08-15T14:48:54+08:00
 draft: false
 tags:
-- javascript
-- chrome
+- Javascript
+- Chrome 插件
+- 前端
 categories:
-- javascript
+- 前端
 ---
 
 最近工作需要用到 Chrome 扩展，于是就特意学习了一下。起初，我以为 Chrome 扩展权限挺大，操作起来应该挺方便的，但是，实际情况各种权限需要申请，而且有些操作还要不停的绕过，写起来也是挺烦的。

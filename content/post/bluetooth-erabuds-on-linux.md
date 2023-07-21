@@ -3,9 +3,9 @@ title: '在 Arch 上启用 QCY-T8 蓝牙耳机'
 date: 2022-03-05T15:57:05+08:00
 draft: false
 tags:
-  - linux
+  - Linux
 categories:
-  - linux
+  - Linux
 ---
 
 突然发现原来可以用的蓝牙耳机突然又不能在 linux 上启用了 →_→ ，虽然安装了 bt-module ，但只是可以找出设备，不能正确识别。

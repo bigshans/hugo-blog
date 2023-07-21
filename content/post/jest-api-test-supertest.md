@@ -3,11 +3,11 @@ title: 使用 jest 和 supertest 进行接口测试
 date: 2021-02-28T17:04:24+08:00
 draft: false
 tags:
-- jest
-- supertest
-- nodejs
+- Jest
+- Supertest
+- Node
 categories:
-- nodejs
+- 后端
 ---
 
 最近写接口代码尝试用测试，用了一下，感觉还是很爽的，提前解决了很多 bug 。不过因为不太熟练，所以常常在解决 supertest 的问题，在这里总结一下。

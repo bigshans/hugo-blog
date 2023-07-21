@@ -2,11 +2,11 @@
 title: systemd-nspawn 的简单使用
 date: 2019-11-24 23:23:03
 tags:
-- linux
+- Linux
 - systemd
 - system-nspwan
 categories:
-- linux
+- Linux
 ---
 
 systemd-nspawn 是 docker 与一样的 container 应用，只不过 docker 相比，跟类似于 chroot 。个人还是比较喜欢 chroot 这样的，这样有种子系统的感觉，与 docker 的 container 相比， chroot 下的操作是会被保留下来的， docker 和 chroot 还是两种不同情况，不可同语。

@@ -2,9 +2,10 @@
 title: 写个简单的 QOS
 date: 2020-01-27 21:58:14
 tags:
-- nodejs
+- Node
+- 后端
 categories:
-- nodejs
+- 后端
 ---
 
 最近客户端发生了 bug ，导致我们的服务被疯狂请求， QPS 高达 1000 ！数据压力很大，tjt 让我写个 qos ，就是限制接口访问次数，我粗略写了个，还可以。

@@ -2,10 +2,10 @@
 title: 在 linux 下备份系统
 date: 2019-11-17 22:13:03
 tags:
-- linux
-- backup
+- Linux
+- 备份
 categories:
-- linux
+- Linux
 ---
 
 新买的移动硬盘到了，着手做新的启动盘。在硬盘上分了一个 G ，然后用 Deepin 的启动盘制作工具做了一个启动盘。然后重启，启动 Deepin live cd ，然后还备份还是失败了。没办法，只能另寻他路。

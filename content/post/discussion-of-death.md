@@ -3,7 +3,8 @@ title: 对死亡的讨论
 date: 2021-10-30T18:15:47+08:00
 draft: false
 tags:
-  - 随笔
+  - 死亡
+  - 思辨
 categories:
   - 思辨
 ---

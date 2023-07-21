@@ -3,10 +3,11 @@ title: "将 snap 打包成 AUR"
 date: 2022-09-09T14:31:52+08:00
 draft: false
 categories:
-- linux
+- Linux
 tags:
-- linux
-- 打包
+- Linux
+- AUR
+- Masscode
 ---
 
 masscode 仅仅提供了 snap 包给 Linux 版，但我并不想使用 snap ，所以就想单独打包。由于 masscode 是 electron 应用，所以理论上只需要拿到 `resources/app.asar` 就万事大吉了。

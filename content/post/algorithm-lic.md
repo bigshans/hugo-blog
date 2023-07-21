@@ -3,10 +3,10 @@ title: 最长上升子序列模板
 date: 2019-03-22 20:40:40
 tags:
 - LIS
-- algorithm
-- dp
+- Algorithm
+- DP
 categories:
-- algorithm
+- Algorithm
 mathjax: true
 ---
 

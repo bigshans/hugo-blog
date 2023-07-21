@@ -3,9 +3,9 @@ title: GO 的调度器
 date: 2022-05-31T10:55:31+08:00
 draft: false
 tags:
-- golang
+- Golang
 categories:
-- 语言学习
+- Golang
 ---
 
 ## 译前序

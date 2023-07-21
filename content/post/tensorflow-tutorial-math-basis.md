@@ -5,8 +5,8 @@ draft: false
 markup: pandoc
 tags:
 - 机器学习
-- tensorflow
-- python
+- Tensorflow
+- Python
 categories:
 - 机器学习
 ---

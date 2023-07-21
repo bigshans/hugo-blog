@@ -4,10 +4,10 @@ date: 2021-10-22T13:46:00+08:00
 markup: pandoc
 draft: false
 tags:
-- hugo
-- golang
+- Hugo
+- Golang
 categories:
-- linux
+- Hugo
 ---
 
 Hugo 可以使用不同的 markdown 引擎来解析 `md` ，pandoc 就是其中之一。不过问题在于，使用 pandoc 就不会有 TOC ，如果在意这个的话使用起来还是挺麻烦的。

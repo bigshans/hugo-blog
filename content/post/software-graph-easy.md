@@ -2,11 +2,11 @@
 title: 安装 graph-easy
 date: 2018-09-03 17:34:16
 tags:
-- linux
-- perl
-- graph-easy
+- Linux
+- Perl
+- Graph-easy
 categories:
-- software
+- Software
 ---
 推荐一个软件， graph-easy  。如果你查看文档的话，经常能看到一些 ascii 码流程画，个人觉得非常酷，于是去查找了一下，发现了这个软件。下面我将做一些简单的介绍。
 <!--more-->
