@@ -3,7 +3,7 @@ title: 用 Svelte 写个简单的 Todo
 date: 2021-02-16T20:30:32+08:00
 draft: false
 categories:
-- 前端
+- Svelte
 tags:
 - 前端
 - Svelte

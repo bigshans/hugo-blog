@@ -6,7 +6,7 @@ tags:
 - 前端
 - Vue
 categories:
-- 前端
+- Vue
 ---
 
 在 Vue 3.2 发布的内容中，最主要内容就是 `<script setup>` 。 `<script setup>` 想必大家都有使用过，跟当初作为实验特性不同，这次正式发布还是有很多的修改的。

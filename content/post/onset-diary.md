@@ -1,5 +1,5 @@
 ---
-title: '发病随记'
+title: '随记'
 date: 2022-03-29T01:16:23+08:00
 draft: false
 tags:

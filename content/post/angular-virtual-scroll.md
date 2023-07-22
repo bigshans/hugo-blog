@@ -2,11 +2,11 @@
 title: angular 虚拟滚动的一些坑
 date: 2019-12-08 20:23:42
 tags:
-- angular
+- Angular
 - 前端
 - 虚拟滚动
 categories:
-- 前端
+- Angular
 ---
 
 最近被赶过去写前端了。

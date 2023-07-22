@@ -5,7 +5,7 @@ tags:
 - Javascript
 - Python
 categories:
-- 编程随笔
+- 解决方案
 ---
 NeteaseCloudMusicApi 得重构，首先得把 router 目录下的一大堆给归拢为一个 js 方便 exports 。然而下面有九十多个文件，所以一个个复制粘贴是不现实的，更何况未来这些文件有改动，于上游一 merge ，这代码得改得老痛苦了。所以决定自己写一个小工具解决这个问题。
 <!--more-->

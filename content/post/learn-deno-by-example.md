@@ -6,7 +6,7 @@ tags:
 - Deno
 - Typescript
 categories:
-- 教程
+- Deno
 ---
 
 Deno 算是一个新的 TypeScript 运行时，个人简单看了一下，感觉还可以。用来简单写一些东西还是很方便的。但网络上 Deno 相关的教程都很老了， Deno 都出正式了，但相关的教程大多还是尝鲜，所以找例子的时候遇到了很大的问题。
