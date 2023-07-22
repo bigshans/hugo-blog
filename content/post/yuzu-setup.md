@@ -38,7 +38,7 @@ categories:
 
 最终效果：
 
-![展示](/post/img/tsukihime.png)
+![展示](../img/tsukihime.png)
 
 然后就可以愉快地啃生肉了（不是
 

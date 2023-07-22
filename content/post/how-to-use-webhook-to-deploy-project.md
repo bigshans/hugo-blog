@@ -45,7 +45,7 @@ location ~ \.php$ {
 
 访问一下我们的服务器应该出现 `phpinfo` 的信息。
 
-![这是我本地的图片](/post/img/phpinfo.png)
+![这是我本地的图片](../img/phpinfo.png)
 
 然我我们编写正式的 deploy.php 。
 
@@ -78,7 +78,7 @@ http_response_code(404);
 
 然后开始配置 Webhook ，点击 Webhooks ，再点击添加 `Add Webhook` ，进入到如下页面。
 
-![](/post/img/add-webhook.png)
+![](../img/add-webhook.png)
 
 Payload URL 就填写我们自己的 deploy.php 的请求地址即可。Secret 要与我们在 deploy.php 里的保持一致。
 
