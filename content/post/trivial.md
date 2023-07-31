@@ -52,3 +52,11 @@ git push origin master
 ## 软件
 
 `screenkey` 录制屏幕快捷键的软件。
+
+## `dmesg`
+
+打印内核日志。
+
+```shell
+sudo dmesg -w
+```
