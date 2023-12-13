@@ -60,3 +60,11 @@ git push origin master
 ```shell
 sudo dmesg -w
 ```
+
+## 前端
+
+pnpm 清理。
+
+```shell
+pnpm store prune
+```
