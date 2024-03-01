@@ -1,6 +1,7 @@
 ---
 title: "使用 coc 配置 @delance/runtime"
 date: 2024-02-16T10:16:38+08:00
+lastmod: 2024-03-01T15:33:27Z
 markup: pandoc
 draft: false
 category:
@@ -46,3 +47,13 @@ npm install @delance/runtime
 ```
 
 按 `pyright` 或者 `pylance` 配置即可。
+
+---
+
+自 `v2024.2.105` 之后，接受环境变量 `DELANCE_VSIX` 传入本地的 vsix 文件。
+
+```shell
+DELANCE_VSIX=/path/to/pylance-visx npm install @delance/runtime
+```
+
+安装完成后直接运行 `delance-langserver --sdtio` 即可。
