@@ -38,3 +38,7 @@ gcc `gnustep-config --objc-flags` -lgnustep-base -lobjc hello.m -o hello
 编译成功，运行 `./hello` 打印 `2021-09-12 20:50:45.378 hello[61801:61801] hello world` 。
 
 以上都是在命令行环境下的编程，如果想要进行苹果开发的话，你还是得买 Mac 。当然， Objective-C 也不一定非要与苹果绑定，也有基于 GNUStep 开发的图形界面库和应用，不过这些都跟苹果没有半毛钱关系了。
+
+补充：
+
+现在需要安装 gnustep-base 、gnustep-make 和 gcc-objc 。
