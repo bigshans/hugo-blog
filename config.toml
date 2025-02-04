@@ -17,13 +17,12 @@ pygmenttsStyle = "autumn"
 rssLimit = 50
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 8                                              # 首页每页显示的文章数
 disqusShortname = ""      # disqus_shortname
 googleAnalytics = ""      # UA-XXXXXXXX-X
 copyright = "bigshans"            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
-[author]                  # essential                     # 必需
-  name = "bigshans"
+[pagination]
+pagerSize = 8                                              # 首页每页显示的文章数
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -116,6 +115,9 @@ copyright = "bigshans"            # default: author.name ↓        # 默认为�
   customJS = []
 
   uglyURLs = false          # please keep same with uglyurls setting
+
+  [params.author]                  # essential                     # 必需
+  name = "bigshans"
 
   [params.publicCDN]        # load these files from public cdn                          # 启用公共CDN，需自行定义
     enable = true
